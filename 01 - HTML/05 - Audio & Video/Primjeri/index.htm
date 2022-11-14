@@ -10,26 +10,24 @@
 
 <body>
     <h1>Multimedijski sadržaji u HTML-u</h1>
-    <h2>Audio</h2>
-    <audio src="../../Media/audio/in3s.ogg" controls></audio>
-
-    <audio controls>
-        <source src="../../Media/audio/in3s.ogg" type="audio/ogg">
-        <source src="../../Media/audio/in3s.mp3" type="audio/mpeg">
-    </audio>
-
-    <hr>
     
     <h2>Video</h2>
-    <!-- <video controls src="../../Media/video/mountains.mp4" width="390"></video> -->
-
-    <video width="390" controls muted loop 
-    poster="../../Media/images/gradovi/london.jpg">
+    <video src="../../Media/video/mountains.mp4" controls width="720" height="404"></video>
+    <video controls width="720" height="404" loop autoplay muted>
         <source src="../../Media/video/mountains.mp4" type="video/mp4">
-        <source src="../../Media/video/mountains.webm" type="video/webm">
-        <p>Vaš preglednik ne podržava prikazivanje video sadržaja!</p>
     </video>
 
+    <video controls width="720" height="404">
+        <source src="../../Media/video/mountains.mp4" type="video/mp4">
+        <source src="../../Media/video/mountains.webm" type="video/webm">
+        <p>Vaš preglednik na podržava prikazivanje video sadržaja!</p>
+    </video>
+
+    <h2>Audio</h2>
+    <audio src="../../Media/audio/in3s.mp3" controls></audio>
+    <audio controls>
+        <source src="../../Media/audio/in3s.mp3" type="audio/mp3">
+    </audio>
 </body>
 
 </html>
