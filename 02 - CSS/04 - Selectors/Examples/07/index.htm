@@ -6,7 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pseudo-klase</title>
+    <style>
+        body {
+            color: #333;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 20px;
+        }
 
+        /* Descendant selector (selektor sa "razmakom") */
+        section p {
+            color: green;
+        }
+
+        /* Descendant selector (selektor sa "razmakom") */
+        footer section p {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        /* Descendant selector (selektor sa "razmakom") */
+        article p {
+            color: red;
+        }
+
+        /* Child selector (selektor sa ">") - "pronađi" sve elemente SECTION kojemu je dijete DIV 
+        kojemu je dijete PARAGRAF i primijeni pravilo */
+        section>div>p {
+            text-decoration: line-through solid red;
+        }
+
+        /* Adjacent sibling selector (selektor sa "+") - pronađi sve H1 tagove, gdje je PRVI IZRAVNI ELEMENT paragraf*/
+        h1+p {
+            font-weight: bold;
+            color: blue;
+        }
+    </style>
 </head>
 
 <body>
@@ -14,18 +47,23 @@
         <h1>Zaglavlje</h1>
         <p>Odlomak</p>
     </header>
+
     <main>
+
         <section>
+            <p>Izravan primjer</p>
             <h1>Sekcija</h1>
             <div>
-                <p>Odlomak</p>
+                <p>Neizravan primjer</p>
                 <p>Odlomak</p>
             </div>
+
             <article>
-                <p>Odlomak</p>
-                <p>Odlomak</p>
+                <p>Paragraf inside of article</p>
+                <p>Paragraf inside of article</p>
             </article>
         </section>
+
         <section>
             <h1>Sekcija</h1>
             <p>Odlomak</p>
@@ -34,13 +72,14 @@
             <p>Odlomak</p>
             <p>Odlomak</p>
         </section>
+
         <article>
             <h1>Objava</h1>
-            <p>Odlomak</p>
-            <p>Odlomak</p>
-            <p>Odlomak</p>
-            <p>Odlomak</p>
-            <p>Odlomak</p>
+            <p>Paragraf inside of article</p>
+            <p>Paragraf inside of article</p>
+            <p>Paragraf inside of article</p>
+            <p>Paragraf inside of article</p>
+            <p>Paragraf inside of article</p>
         </article>
     </main>
 
@@ -54,6 +93,7 @@
             <p>Odlomak</p>
             <p>Odlomak</p>
         </section>
+
         <section>
             <h1>Sekcija</h1>
             <p>Odlomak</p>
