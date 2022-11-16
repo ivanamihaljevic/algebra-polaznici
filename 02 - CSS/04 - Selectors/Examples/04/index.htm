@@ -6,7 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Selektori HTML elemenata</title>
+    <style>
+        body {
+            color: #333;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 20px;
+        }
 
+        /* Targetiramo sve elemente koji imaju TITLE kao atribut */
+        [title] {
+            text-decoration: underline solid red;
+        }
+
+        /* Targetiramo sve TITLE atribute sa TOČNO OVOM VRIJEDNOSTI (prvi odlomak) */
+        [title="prvi odlomak"] {
+            font-weight: bold;
+        }
+
+        /* Targetira sve TITLE atribute, koji u sebi kao vrijednost BILO GDJE imaju riječ "odlomak" */
+        [title*="odlomak"] {
+            color: green;
+        }
+
+
+        /* Targetira sve TITLE atribute, koji u sebi imaju kao vrijednost riječ "ODLOMAK" koja je odvojena RAZMAKOM */
+        [title~="odlomak"] {
+            text-transform: uppercase;
+        }
+
+        /* Targetira sve TITLE atribute, koji u sebi imaju kao vrijednost riječ "ODLOMAK" na prvom mjestu - započinju
+        s riječi "ODLOMAK" */
+        [title^="odlomak"] {
+            font-style: italic;
+        }
+
+        /* Targetira sve TITLE atribute, koji u sebi imaju kao vrijednost riječ "ODLOMAK", ali riječ "odlomak" je odvojena
+        sa povlakom (-). Samo povlaka, underscore (_) ne radi! */
+        [title|="odlomak"] {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        /* Targetira sve TITLE atribute, koji kao vrijednost imaju na kraju (završetku) riječ "ODLOMAK" */
+        [title$="odlomak"] {
+            color: darkblue;
+        }
+    </style>
 </head>
 
 <body>
