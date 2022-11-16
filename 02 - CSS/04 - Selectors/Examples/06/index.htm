@@ -6,33 +6,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pseudo-klase</title>
+    <style>
+        body {
+            color: #333;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 20px;
+        }
 
+        header {
+            color: red;
+        }
+
+        footer {
+            color: orange;
+        }
+
+        /* Pronađi sve PARAGRAFE <p> koji su PRVO DIJETE bilo kojeg elementa */
+        p:first-child {
+            text-decoration: underline wavy red;
+        }
+
+        /* Pronađi sve PARAGRAFE <p> koji su ZADNJE DIJETE bilo kojeg elementa */
+        p:last-child {
+            font-size: 14px;
+            color: pink;
+        }
+
+        /* Pronađi svaki paragraf koji je DRUGO (2) dijete bilo kojeg roditelja (elementa) */
+        p:nth-child(2) {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        /* Traži sve PRVE elemente koji su TIPA (type) PARAGRAF (<p>) - čim ga pronađe, primijeni pravilo! */
+        p:first-of-type {
+            font-weight: bold;
+            color: #645394;
+        }
+
+        /* Traži sve ZADNJE elemente koji su TIPA (type) PARAGRAF (<p>) - čim ga pronađe, primijeni pravilo! */
+        p:last-of-type {
+            text-transform: uppercase;
+        }
+
+        /* Traži svaki drugi PARAGRAF <p> u njegovom roditelju. */
+        p:nth-of-type(2) {
+            color: darkred;
+        }
+    </style>
 </head>
 
 <body>
+    <!-- Prvo dijete je <h1>, zadnje dijete je <p> 
+         Roditelj je: <header>
+    -->
     <header>
         <h1>Zaglavlje</h1>
-        <p>Odlomak</p>
+            <p>Odlomak</p>
     </header>
+    <hr>
+    <!-- Prvo dijete je <p>, zadnje dijete je <p>
+         Roditelj je: <section>
+    -->
     <section>
         <p>Odlomak</p>
-        <p>Odlomak</p>
-        <p>Odlomak</p>
-        <p>Odlomak</p>
-        <p>Odlomak</p>
+            <p>Odlomak</p>
+                <p>Odlomak</p>
+                    <p>Odlomak</p>
+                        <p>Odlomak</p>
     </section>
+    <hr>
+
+    <!-- Prvo dijete je <h1>, zadnje dijete je <p> 
+         Roditelj je: <section>
+    -->
     <section>
         <h1>Naslov sekcije</h1>
-        <p>Odlomak</p>
-        <p>Odlomak</p>
-        <p>Odlomak</p>
-        <p>Odlomak</p>
-        <p>Odlomak</p>
+            <p>Odlomak</p>
+                <p>Odlomak</p>
+                    <p>Odlomak</p>
+                        <p>Odlomak</p>
+                            <p>Odlomak</p>
     </section>
+    <hr>
+
+    <!-- Prvo dijete je <p>, zadnje dijete je <p>
+         Roditelj je: <footer>
+    -->
     <footer>
         <p>Odlomak</p>
-        <p>Odlomak</p>
-        <p>Odlomak</p>
+            <p>Odlomak</p>
+                <p>Odlomak</p>
     </footer>
 </body>
 

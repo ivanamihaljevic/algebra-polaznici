@@ -6,7 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pseudo-klase</title>
+    <style>
+        body {
+            color: #333;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 20px;
+        }
 
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        /* Targetir sve <a> elemente, na koje je korisnik već kliknuo (odnosno korisnik ih je posjetio) */
+        a:visited {
+            color: #999;
+        }
+
+        /* Targetira sve <a> elemente, i primjenjuje pravila kada korisnik PRIJEĐE MIŠEM preko poveznica */
+        a:hover {
+            color: #F93;
+            text-decoration: underline;
+            cursor: help;
+        }
+
+        /* Targetira sve <input> elemente kada su u FOKUSU (kliknuli smo unutar input fielda) */
+        input:focus {
+            color: white;
+            background-color: #F0F;
+        }
+
+        /*  Targetira sve <a> elemente, i primjenjuje pravila kada je poveznica AKTIVA. Poveznica je AKTIVNA kada
+            korisnik klikne na nju (kod testa, klikni i drži kliknuto jer nestane brzo) */
+        a:active {
+            color: aqua;
+        }
+    </style>
 </head>
 
 <body>
@@ -18,6 +53,8 @@
         <li><a href="#">Lorem Ipsum dolor</a></li>
         <li><a href="#">Lorem Ipsum dolor</a></li>
     </ul>
+
+    <input type="text" placeholder="Unesite ime">
 </body>
 
 </html>
