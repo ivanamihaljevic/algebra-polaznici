@@ -41,17 +41,42 @@
         a:active {
             color: aqua;
         }
+
+        a::after {
+            content: ' 🔗';
+        }
+
+        a::before {
+            content: '➡️ ';
+        }
     </style>
 </head>
 
 <body>
     <ul>
-        <li><a href="#">Lorem Ipsum dolor</a></li>
-        <li><a href="#">Lorem Ipsum dolor</a></li>
-        <li><a href="#">Lorem Ipsum dolor</a></li>
-        <li><a href="#">Lorem Ipsum dolor</a></li>
-        <li><a href="#">Lorem Ipsum dolor</a></li>
-        <li><a href="#">Lorem Ipsum dolor</a></li>
+        <li>
+            <a href="#">Lorem Ipsum dolor</a>
+        </li>
+
+        <li>
+            <a href="#">Lorem Ipsum dolor</a>
+        </li>
+
+        <li>
+            <a href="#">Lorem Ipsum dolor</a>
+        </li>
+
+        <li>
+            <a href="#">Lorem Ipsum dolor</a>
+        </li>
+
+        <li>
+            <a href="#">Lorem Ipsum dolor</a>
+        </li>
+
+        <li>
+            <a href="#">Lorem Ipsum dolor</a>
+        </li>
     </ul>
 
     <input type="text" placeholder="Unesite ime">

@@ -1,0 +1,111 @@
+/* 
+ * Copyright 2022 Nino Škuflić <nino.skuflic@predavaci.algebra.hr>.  
+ */
+
+
+/*----------------------------------------------------------------------------* 
+ * TABLE OF CONTENTS
+ * - Selectors
+ * - Pseudo-classes
+ * - Pseudo-elements
+ *----------------------------------------------------------------------------*/
+
+/**************************************************
+ * SELECTORS
+**************************************************/
+
+body {
+    color: #333;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+    background-color: azure;
+    padding: 20px;
+    font-weight: 100;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    /* 2 * 16px = 32px */
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+    font-size: medium;
+}
+
+a {
+    color: #333;
+}
+
+em {
+    text-decoration: underline;
+}
+
+/* CLASS SELECTORS */
+
+.article-paragraph {
+    font-size: 13px;
+    font-weight: 100;
+}
+
+/* ID SELECTORS */
+
+#important {
+    font-weight: bold;
+}
+
+#main {
+    border: 1px solid #333;
+    padding: 20px;
+    margin-bottom: 2em;
+}
+
+#main h1 {
+    margin-bottom: 0px;
+}
+
+#main p {
+    margin-top: 0px;
+}
+
+/* ATTRIBUTE SELECTORS */
+
+[title] {
+    text-decoration: underline solid #333;
+}
+
+[title="first paragraph"] {
+    font-weight: bold;
+}
+
+/**************************************************
+ * PSEUDO-CLASSES
+**************************************************/
+
+a:visited {
+    color: blue;
+}
+
+a:hover {
+    color: greenyellow;
+}
+
+/* The :nth-child() CSS pseudo-class matches elements based on their position among a group of siblings. */
+p:nth-child(2) {
+    font-family: 'Courier New', Courier, monospace
+}
+
+/* The :first-of-type CSS pseudo-class represents the first element of its type among a group of sibling elements. */
+p:first-of-type {
+    font-weight: bold;
+}
+
+/**************************************************
+ * PSEUDO-ELEMENTS
+**************************************************/
+
+/* Selects the whole first line, of any paragraph */
+p::first-line {
+    color: blue;
+}
