@@ -1,0 +1,14 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    color: #ccc;
+    background: url(../../images/fire.png) center 35%/25% no-repeat fixed,
+        url(../../images/pattern.png),
+        url(../../images/blossom.jpg) center center/cover no-repeat fixed;
+}
+
+h1 {
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
