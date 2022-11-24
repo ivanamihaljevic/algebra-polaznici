@@ -1,0 +1,21 @@
+/* Block Elements (blok elementi) */
+
+/* PARAGRAF je po defaultu BLOK ELEMENT, ali sa display: inline svojstvom postaje  element reda */
+
+.prvi {
+    background-color: yellow;
+    display: inline;
+}
+
+p {
+    background-color: rgb(152, 231, 231);
+    display: inline;
+}
+
+/* Inline Elements (elementi reda) */
+
+/* EM je po defaultu ELEMENT REDA, ali sa display: block svojstvom postaje blok element */
+em {
+    background-color: yellow;
+    display: block;
+}
