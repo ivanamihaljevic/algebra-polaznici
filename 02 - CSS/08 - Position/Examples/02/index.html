@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position: Relative</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+        }
+
+        .box1 {
+            background-color: aquamarine;
+        }
+
+        /* Relativno pozicioniranje elemenata nam omogućuje da pomaknemo element u odnosu na njegovu statičnu poziciju koja je zadana tokom dokumenta */
+
+        .box2 {
+            background-color: orange;
+            position: relative;
+            /* Pomakni ga za 200px od lijeva na desno */
+            left: 200px;
+            /* Pomakni ga za -200px od dolje prema gore */
+            top: -200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+
+</html>
