@@ -1,0 +1,14 @@
+body {
+    font-family: Tahoma, sans-serif;
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+}
+
+img {
+    border: 2px solid #333;
+    padding: 20px;
+    width: 30%;
+    margin: 1em auto;
+    display: block;
+}
