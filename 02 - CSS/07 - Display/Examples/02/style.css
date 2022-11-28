@@ -1,0 +1,44 @@
+body {
+    font-family: Tahoma, sans-serif;
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+}
+
+ul {
+    border: 1px solid #CCC;
+    list-style-type: none;
+    padding: 1em;
+}
+
+li {
+    background-color: #FFC;
+    display: inline-block;
+    width: 20%;
+}
+
+p {
+    border: 10px solid #CCC;
+    padding: 30px;
+    display: inline-block;
+    margin: 0;
+    margin-left: -4px;
+    box-sizing: border-box;
+
+    /* Border Box POŠTUJE našu zadanu širinu, i "smanjuje width" kako bi "strpao" sve unutar 400px (padding i border) */
+
+    /* Content Box (default) NE POŠTUJE našu zadanu širinu i proširuje ju kako bi dodao padding i border */
+
+    width: 400px;
+
+    /* Stvarna veličina po defaultu (content-box) bit će 480 px
+       width (400px) + padding-left (30px) + padding-right (30px) + border-left (10px) + borde-right (10px) = 480px, a ako želimo da i SADRŽAJ i PADDING i BORDER stanu u 400px, koristiti ćemo box-sizing: border-box;
+    */
+}
+
+/* Način računanja sveukupne širine (width) elementa
+*  width + padding-left + padding-right + border-left + border-right
+*
+*  Način računanja sveukupne visine (height) elementa
+*  height + padding-top + padding-bottom + border-top + border-bottom
+*/
