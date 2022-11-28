@@ -1,0 +1,24 @@
+body {
+    font-family: Tahoma, sans-serif;
+    font-size: 16px;
+    color: #333;
+    padding: 20px;
+}
+
+.button {
+    background-color: crimson;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    /* border-bottom-left-radius: 25px;
+    border-top-right-radius: 25px; 
+    border-bottom-right-radius: 25px;
+    border-top-left-radius: 25px;
+    */
+    border-radius: 20px 0 20px 0;
+    box-shadow: 11px 9px 5px 0px black;
+}
+
+.button:hover {
+    box-shadow: none;
+}
