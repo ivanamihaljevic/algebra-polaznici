@@ -23,5 +23,9 @@ body {
 }
 
 .flex-container {
+    /* display: flex, da bi naš roditelj (DIV KOJI IMA KLASU FLEX CONTAINER) postao zaista i flex container*/
     display: flex;
+
+    /* U kojem smjeru će se prikazivati naša djeca (flex items) unutar flex container roditelja -> može biti, row, row-reverse, column, colum-reverse*/
+    flex-direction: row-reverse;
 }

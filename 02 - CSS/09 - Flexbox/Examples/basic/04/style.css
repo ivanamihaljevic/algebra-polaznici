@@ -24,4 +24,8 @@ body {
 
 .flex-container {
     display: flex;
+    /* Ako želite napisati i FLEX DIRECTION i FLEX WRAP unutar jedne sintakse,
+    koristiti ćete svojstvo flex-flow. */
+    flex-flow: row wrap-reverse;
 }
+
