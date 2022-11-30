@@ -7,7 +7,26 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Position</title>
     <style>
+        body {
+            margin: 0;
+        }
 
+        div {
+            width: 200px;
+            height: 200px;
+        }
+
+        .box1 {
+            background-color: cadetblue;
+        }
+
+        .box2 {
+            /* Ostat će FIKSNO pozicioniran u odnosu na naš BROWSER WINDOW!*/
+            background: orange;
+            position: fixed;
+            right: 100px;
+            bottom: 100px;
+        }
     </style>
 </head>
 
