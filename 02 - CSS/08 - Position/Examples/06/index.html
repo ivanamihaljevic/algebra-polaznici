@@ -7,7 +7,50 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Position</title>
     <style>
+        body {
+            margin: 0;
+        }
 
+        div {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+        }
+
+        .box1 {
+            background-color: cadetblue;
+            z-index: 4;
+        }
+
+        .box2 {
+            background-color: orange;
+            left: 50px;
+            top: 50px;
+            z-index: 3;
+        }
+
+        .box3 {
+            background-color: pink;
+            left: 100px;
+            top: 100px;
+            z-index: 2;
+        }
+
+        .box4 {
+            background-color: seagreen;
+            left: 150px;
+            top: 150px;
+            z-index: 1;
+        }
+
+        .box5 {
+            background-color: tomato;
+            width: 400px;
+            height: 400px;
+            z-index: 5;
+            /* Ne radi jer se NE primjenjuje na one elemente čija je pozicija STATIČNA (defaultna) */
+            position: static;
+        }
     </style>
 </head>
 
