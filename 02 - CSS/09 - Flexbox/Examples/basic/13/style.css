@@ -32,3 +32,14 @@ body {
 .flex-item {
     flex-grow: 1;
 }
+
+.flex-item:nth-child(1) {
+    color: white;
+    background-color: brown;
+    align-self: center;
+}
+
+.flex-item:nth-child(3) {
+    background-color: aqua;
+    align-self: flex-end;
+}
