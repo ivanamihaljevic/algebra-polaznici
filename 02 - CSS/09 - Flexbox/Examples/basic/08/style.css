@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    border: 1px dashed #666;
+    padding: 1em;
+}
+
+.wrapper div {
+    background: #eee;
+    border: 1px solid #666;
+    padding: 1em;
+    width: 150px;
+    margin: 1em;
+}
+
+.flex-container {
+    display: flex;
+}
+
+/* Korištenjem svojstva ORDER, određujemo kako će određeni elemnt (flex item) - dijete, bit raspoređen unutar roditelja (flex-container). Zadana vrijednost jest 0, a može biti i negativna (-1, -5, -100...).*/
+
+.flex-item:nth-child(3) {
+    background-color: olive;
+    order: -1;
+}
+
+/* Ako ih želimo sortirati posebnim redosljedom, morat ćemo svima dati order. Ako dva elementa imaju isti order number, npr 4,4 - onda će biti posloženi isto kako su napisani u HTML kodu (dakle slijede defaultni source order). */
+
+.flex-item:nth-child(2) {
+    background-color: pink;
+    order: 1;
+}
