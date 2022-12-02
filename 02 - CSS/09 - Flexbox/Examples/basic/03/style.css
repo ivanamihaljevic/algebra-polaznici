@@ -23,6 +23,11 @@ body {
 }
 
 .flex-container {
+    /* Nema fleksa bez flex-a ;) */
     display: flex;
+
+    /* Definira kako će se content (FLEX ITEMS) ponašati unutar flex containera kada dođu do kraja ekrana (containera npr). Ako ne stanu u jedan red, i kažemo im "WRAP" doslovno će se wrapati jedan ispod drugog. Ako kažemo NOWRAP - a ništa, onda nema wrapa :D 
+    
+    Ako kažemo wrap-reverse, onda budu wrapani ali OBRNUTIM REDOSLJEDOM. */
     flex-wrap: wrap;
 }
