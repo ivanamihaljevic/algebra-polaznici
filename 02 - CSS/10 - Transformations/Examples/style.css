@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Tahoma, sans-serif;
+    font-size: 16px;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* box */
+
+div {
+    background-color: #f93;
+    border: 1px solid #333;
+    width: 300px;
+    height: 150px;
+    margin: 4em auto;
+}
