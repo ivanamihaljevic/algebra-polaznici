@@ -24,3 +24,20 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
+.flex-item{
+    flex-basis: 32%;
+    height: 100px;
+    margin-bottom: 2%;
+}
+
+/*
+(4 x 0) + 1 = 1 => 1. Element
+(4 x 1) + 1 = 5 => 5. Element
+(4 x 2) + 1 = 9 => 9. Element
+https://css-tricks.com/how-nth-child-works/
+*/
+
+.flex-item:nth-child(4n+1){
+    flex-basis: 100%;
+}
