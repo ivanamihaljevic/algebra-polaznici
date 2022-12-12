@@ -15,9 +15,31 @@ h1 {
 /* box */
 
 div {
-    background-color: #f93;
+    background-color: azure;
     border: 1px solid #333;
     width: 300px;
     height: 150px;
     margin: 4em auto;
+}
+
+.translate {
+    transform: translate(150px, -20px)
+}
+
+.rotate {
+    transform: rotate(30deg);
+}
+
+.scale {
+    background-color: bisque;
+    /* Zadana vrijednost je 1. Ako stavimo kao vrijednost 1.5, veličina našeg elementa biti će uvećana za 1.5 puta, odnosno za 50%. Ako želimo smanjiti element, stavit ćemo vrijednost funkcije MANJU od 1 - 0.5 smanjuje element za 50%. */
+    transform: scale(1.5);
+}
+
+.skew {
+    transform: skew(20deg, 15deg);
+}
+
+.multiple {
+    transform: rotate(30deg) scale(0.5, 0.3) skew(20deg, 15deg);
 }
