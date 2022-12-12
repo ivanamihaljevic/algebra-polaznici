@@ -11,3 +11,22 @@ body {
 .wrapper {
     padding: 1em;
 }
+
+.wrapper div {
+    background: #EEE;
+    border: 1px solid #666;
+    padding: 1em;
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.flex-item {
+    width: 48%;
+    height: 100px;
+    margin-bottom: 2%;
+}
