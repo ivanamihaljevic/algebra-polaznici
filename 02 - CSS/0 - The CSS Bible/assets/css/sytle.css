@@ -11,6 +11,8 @@
  * - Background Color
  * - Box Model
  * - Display (none, visibility, box-sizing)
+ * - Position
+ * - Flex
  *----------------------------------------------------------------------------*/
 
 /**************************************************
@@ -203,4 +205,82 @@ height (set by us) + padding-top + padding-bottom + border-top + border-bottom =
 Content Box (default value of box-sizing) DOES NOT RESPECT our set width. Instead, the 400px width will be taken, and e.g. for a padding set of 20px, the total width will be 440px (400px for our set width + 20px for padding-left + 20px for padding-right. */
 .box {
     box-sizing: border-box;
+}
+
+/**************************************************
+ * POSITION
+**************************************************/
+
+/* The position property specifies the type of positioning method used for an element (static, relative, fixed, absolute or sticky). */
+
+div {
+    position: static;
+    position: absolute;
+    position: relative;
+    position: sticky;
+}
+
+/**************************************************
+ * FLEX
+ * https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+**************************************************/
+
+/* Please visit the above-mentioned guide for all Flex Related questions. */
+
+.flex-container {
+    display: flex;
+}
+
+/**************************************************
+ * TRANSFORMATIONS
+**************************************************/
+
+.translate {
+    transform: translate(150px, -20px);
+
+    background-color: azure;
+    border: 1px solid #333;
+    width: 300px;
+    height: 150px;
+    margin: 4em auto;
+}
+
+.rotate {
+    transform: rotate(30deg);
+
+    background-color: azure;
+    border: 1px solid #333;
+    width: 300px;
+    height: 150px;
+    margin: 4em auto;
+}
+
+.scale {
+    transform: scale(1.5);
+
+    background-color: azure;
+    border: 1px solid #333;
+    width: 300px;
+    height: 150px;
+    margin: 4em auto;
+}
+
+.skew {
+    transform: skew(20deg, 15deg);
+
+    background-color: azure;
+    border: 1px solid #333;
+    width: 300px;
+    height: 150px;
+    margin: 4em auto;
+}
+
+.multiple {
+    transform: rotate(30deg) scale(0.5, 0.3) skew(20deg, 15deg);
+
+    background-color: azure;
+    border: 1px solid #333;
+    width: 300px;
+    height: 150px;
+    margin: 4em auto;
 }
