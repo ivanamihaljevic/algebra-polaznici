@@ -169,3 +169,30 @@ div:nth-of-type(7) {
 div:nth-of-type(7):hover {
   animation-play-state: paused;
 }
+
+/* ANIMACIJA BROJ 8  */
+
+@keyframes animation8 {
+  0% {
+    box-shadow: 0 0 0 0 purple;
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgba(128, 0, 128, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(128, 0, 128, 0);
+  }
+}
+
+div:nth-of-type(8) {
+  color: white;
+  border: 0px;
+  background: purple;
+  animation: animation8 2s infinite;
+}
+
+/* Sintaksa za skraćeno pisanje animacija */
+
+/* animation: name duration timing-function delay iteration-count direction fill-mode play-state */
