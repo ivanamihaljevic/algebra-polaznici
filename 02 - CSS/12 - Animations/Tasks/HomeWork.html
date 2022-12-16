@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .color {
+            margin-top: -20px;
+        }
+
+        .movement3d {
+            margin-bottom: 80px;
+        }
+
+        .clickedAnimation {
+            margin-top: 20px;
+        }
+
+        .animation-in-animation {
+            margin-top: 80px;
+        }
+
+        #circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            animation: changeColor 8s infinite;
+        }
+
+        #square {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation: changePlace 1s infinite alternate;
+            position: relative;
+        }
+
+        #square3d {
+            width: 100px;
+            height: 100px;
+            background-color: hotpink;
+            animation: changeDimention 4s infinite;
+            position: relative;
+            left: 60px;
+            box-shadow: -0.5em 0.5em 0 #e1e1e1;
+        }
+
+        #clickedSquare {
+            width: 100px;
+            height: 100px;
+            background-color: royalblue;
+            position: relative;
+            left: 20px;
+        }
+
+        .clickedSquareActive {
+            animation: clicked 1s infinite;
+        }
+
+        @keyframes clicked {
+            100% {
+                left: 100px;
+            }
+        }
+
+        @keyframes changeDimention {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(-35deg) skew(5deg, 5deg);
+                box-shadow: -2em 2em 0 #e1e1e1;
+                left: 50px;
+            }
+
+            100% {
+                transform: rotate(-50deg) skew(8deg, 25deg);
+                box-shadow: -4em 4em 0 #e1e1e1;
+                left: 40px;
+            }
+        }
+
+        @keyframes changePlace {
+            0% {
+                left: 0px;
+                bottom: 0px;
+            }
+
+            50% {
+                left: 60px;
+                bottom: 10px;
+            }
+
+            100% {
+                left: 120px;
+                bottom: -10px;
+            }
+        }
+
+        @keyframes changeColor {
+            0% {
+                background-color: red;
+            }
+
+            25% {
+                background-color: yellow;
+            }
+
+            50% {
+                background-color: blue;
+            }
+
+            100% {
+                background-color: green;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+<section class="container">
+    <div class="color">
+        <h1>Color animations</h1>
+        <div id="circle"></div>
+    </div>
+
+    <div class="movement">
+        <h1>Movement animations in "loop"</h1>
+        <div id="square"></div>
+    </div>
+
+    <div class="movement3d">
+        <h1>Movement animations in "3d"</h1>
+        <div id="square3d"></div>
+    </div>
+</section>
+
+</html>
