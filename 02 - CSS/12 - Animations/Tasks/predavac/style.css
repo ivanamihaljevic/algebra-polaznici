@@ -1,5 +1,4 @@
 * {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -31,8 +30,7 @@ h1 {
   position: relative;
 }
 
-/* animacije */
-
+/* ANIMACIJA ZA 1. ZADATAK */
 @keyframes animacija1 {
   0% {
     transform: scale(1);
@@ -52,6 +50,7 @@ h1 {
   animation: animacija1 1s ease-in-out infinite;
 }
 
+/* ANIMACIJA ZA 2. ZADATAK */
 @keyframes animacija2 {
   0% {
     transform: translate(0, 0) scale(1) rotate(0);
@@ -70,7 +69,7 @@ h1 {
   animation: animacija2 2s ease-in-out infinite;
 }
 
-
+/* ANIMACIJA ZA 3. ZADATAK */
 @keyframes animacija3 {
   0% {
     transform: rotate(0);
@@ -92,6 +91,7 @@ h1 {
   animation: animacija3 5s linear infinite;
 }
 
+/* ANIMACIJA ZA 4. ZADATAK */
 @keyframes animacija4 {
   0% {
     transform: translate(0, 0);
@@ -114,6 +114,7 @@ h1 {
   animation-play-state: paused;
 }
 
+/* ANIMACIJA ZA 5. ZADATAK */
 @keyframes animacija5 {
   0% {
     top: 0;
@@ -145,6 +146,7 @@ h1 {
   animation: animacija5 4s ease-in-out infinite;
 }
 
+/* ANIMACIJA ZA 6. ZADATAK */
 @keyframes animacija6 {
   0% {}
 
