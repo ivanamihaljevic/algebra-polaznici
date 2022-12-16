@@ -39,3 +39,48 @@ section {
     background: #eee;
     flex: 0 24%;
 }
+
+/* Primjenjuje se na sve uređaje čija je širina manja od 1024px */
+@media (max-width: 1023px) {
+    section {
+        background-color: pink;
+        flex: 0 49%;
+        height: 48%;
+    }
+}
+
+/* Primjenjuje se na sve uređaje čija je širina manja od 768px */
+@media (max-width: 767px) {
+
+    section:first-child,
+    section:last-child {
+        background-color: blue;
+        flex: 0 100%;
+        height: 24%;
+    }
+}
+
+/* Primjenjuje se na sve uređaje čija je širina manja od 480px */
+@media (max-width: 479px) {
+    section {
+        background-color: olive;
+        flex: 0 100%;
+        height: 24%;
+    }
+}
+
+/* Primjenjuje se na sve uređaje čija je orijentacija LANDSCAPE */
+@media (orientation: landscape) {
+    section {
+        background-color: red;
+    }
+}
+
+/* Primjenjuje se na sve uređaje čija je visina manja od 480px i orijnetacija je LANDSCAPE 
+
+Logički operator (OR) zapisujete kao ZAREZ (,) između 2 pravila */
+@media (orientation: landscape), (max-height: 479px) {
+    section {
+        background-color: purple;
+    }
+}
