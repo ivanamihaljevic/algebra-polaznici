@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #eee;
+  color: white;
+  font-family: Tahoma, sans-serif;
+}
+
+div {
+  margin: 0 0 1em 0;
+  padding: 1em;
+  background: #333;
+  color: white;
+}
+
+.col-8:before {
+  content: "Ovo je .col-8";
+}
+
+.col-7:before {
+  content: "Ovo je .col-7";
+}
+
+.col-6:before {
+  content: "Ovo je .col-6";
+}
+
+.col-5:before {
+  content: "Ovo je .col-5";
+}
+
+.col-4:before {
+  content: "Ovo je .col-4";
+}
+
+.col-3:before {
+  content: "Ovo je .col-3";
+}
+
+.col-2:before {
+  content: "Ovo je .col-2";
+}
+
+.col-1:before {
+  content: "Ovo je .col-1";
+}/*# sourceMappingURL=style.css.map */

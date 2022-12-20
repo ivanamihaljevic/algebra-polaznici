@@ -13,18 +13,25 @@ $font2: Courier, monospace;
 body {
     @include spacing(0, 0);
     background-color: $color1;
-    color: $color2;
+    color: white;
     font-family: $font1;
 }
 
 div {
-    @include spacing(0 0 1em 0, 0);
-    background: $color3;
-    height: 20px;
+    @include spacing(0 0 1em 0, 1em);
+    background: $color2;
+    color: white;
 }
 
-@for $i from 1 through 9 {
-    .col-#{$i} {
-        width: 50px * $i;
+$number: 8;
+
+@while $number > 0 {
+    .col-#{$number} {
+        &:before {
+            content: 'Ovo je .col-#{$number}';
+        }
     }
+
+    $number: $number - 1;
+
 }
