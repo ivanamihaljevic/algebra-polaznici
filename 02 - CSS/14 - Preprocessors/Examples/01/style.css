@@ -1,0 +1,50 @@
+body {
+  background-color: #EEE;
+  color: #333;
+  font-family: Verdana, Tahoma, sans-serif;
+  margin: 0;
+}
+
+header,
+footer {
+  background-color: #333;
+  color: #EEE;
+}
+
+header {
+  text-align: center;
+}
+header h1 {
+  color: #800;
+}
+header p {
+  font-size: 20px;
+}
+header a {
+  color: rgb(187, 187, 17);
+  /* Roditeljski selektro -> primjenjuje se samo na A oznaku */
+}
+header a:hover {
+  color: green;
+}
+
+section h1 {
+  font-family: "Courier New", Courier, monospace;
+}
+section p {
+  text-align: justify;
+}
+section a {
+  color: #800;
+}
+
+footer h1 {
+  color: rgb(187, 187, 17);
+}
+footer p {
+  font-size: 12px;
+}
+footer a {
+  color: green;
+  font-size: 10px;
+}/*# sourceMappingURL=style.css.map */
