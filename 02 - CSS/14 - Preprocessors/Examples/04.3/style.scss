@@ -14,3 +14,16 @@ body {
 .borders {
     border: 2px solid $color2;
 }
+
+// Placeholder selektor -> koristimo npr. za extendanje kada nemamo tu klasu
+%spaces {
+    padding: 1em;
+    margin: 1em;
+}
+
+header,
+footer,
+article {
+    @extend .borders;
+    @extend %spaces;
+}
