@@ -42,9 +42,7 @@ footer {
   color: $background;
 }
 nav,
-section {
-  @extend %borders; //@extend placeholder selectors
-}
+
 
 header {
   @include align-element(null, center, auto);
