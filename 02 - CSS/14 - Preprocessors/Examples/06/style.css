@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #eee;
+  color: #333;
+  font-family: Tahoma, sans-serif;
+}
+
+div {
+  margin: 0 0 1em 0;
+  padding: 0;
+  background: #800;
+  height: 20px;
+}
+
+.col-1 {
+  width: 50px;
+}
+
+.col-2 {
+  width: 100px;
+}
+
+.col-3 {
+  width: 150px;
+}
+
+.col-4 {
+  width: 200px;
+}
+
+.col-5 {
+  width: 250px;
+}
+
+.col-6 {
+  width: 300px;
+}
+
+.col-7 {
+  width: 350px;
+}
+
+.col-8 {
+  width: 400px;
+}
+
+.col-9 {
+  width: 450px;
+}/*# sourceMappingURL=style.css.map */

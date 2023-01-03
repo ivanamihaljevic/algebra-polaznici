@@ -1,0 +1,37 @@
+// variables
+$color1: #eee;
+$color2: #333;
+$color3: #800;
+$font1: Tahoma, sans-serif;
+$font2: Courier, monospace;
+
+@mixin spacing($margin, $padding) {
+    margin: $margin;
+    padding: $padding;
+}
+
+body {
+    @include spacing(0, 0);
+    background-color: $color1;
+    color: white;
+    font-family: $font1;
+}
+
+div {
+    @include spacing(0 0 1em 0, 1em);
+    background: $color2;
+    color: white;
+}
+
+$number: 8;
+
+@while $number > 0 {
+    .col-#{$number} {
+        &:before {
+            content: 'Ovo je .col-#{$number}';
+        }
+    }
+
+    $number: $number - 1;
+
+}

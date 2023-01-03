@@ -1,0 +1,80 @@
+// TIPOVI PODATAKA
+// STRING -> a, "hello world", Hello World, Hello!
+// NUMBERS (double ili integer) -> 1, 6, 300, 1.2, 1.6, 0.8 -> (px, em, rem, %)
+// BOJA -> RGB, #, red
+// LISTA VRIJEDNOSTI (a, b, c, d)
+// BOOLEAN -> true ili false
+// NULL -> odsutnost vrijednosti
+
+$primary: #EEE;
+$secondary: #333;
+$red: #800;
+$yellow: rgb(187, 187, 17);
+$green: green;
+$big: 12px;
+$family: 'Courier New', Courier, monospace;
+
+body {
+    background-color: $primary;
+    color: $secondary;
+    font-family: Verdana, Tahoma, sans-serif;
+    margin: 0;
+}
+
+header,
+footer {
+    background-color: $secondary;
+    color: $primary;
+}
+
+// Nesting
+header {
+    text-align: center;
+
+    h1 {
+        color: $red;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    a {
+        color: $yellow;
+
+        /* Roditeljski selektro -> primjenjuje se samo na A oznaku */
+        &:hover {
+            color: $green;
+        }
+    }
+
+}
+
+section {
+    h1 {
+        font-family: $family;
+    }
+
+    p {
+        text-align: justify;
+    }
+
+    a {
+        color: $red;
+    }
+}
+
+footer {
+    h1 {
+        color: $yellow;
+    }
+
+    p {
+        font-size: $big;
+    }
+
+    a {
+        color: $green;
+        font-size: 10px;
+    }
+}
