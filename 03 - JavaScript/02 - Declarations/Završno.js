@@ -21,4 +21,11 @@ const pi = 3.141592;
 // Koristite let kada imate vrijednosti koje će se mijenjati
 // Koristite const kada imate konstante
 
+let number = 10;
+number = 15;
+
+console.log(number);
+
+number = 50;
+console.log(number);
 // Kraj mog programa
