@@ -1,0 +1,53 @@
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.main {
+    background-color: #EFEFEF;
+    padding: 2em;
+}
+
+.main button {
+    background-color: #0000FF;
+    ;
+    border-radius: 25px;
+    padding: 10px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 100;
+    border: 0;
+    margin-bottom: 10px;
+}
+
+.animations {
+    padding: 2em;
+}
+
+.panda-dancing {
+    max-width: 100px;
+}
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+#content-wrap {
+    padding-bottom: 2.5rem;
+    /* Footer height */
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footer-text {
+    font-size: 10px;
+    font-weight: 100;
+}
