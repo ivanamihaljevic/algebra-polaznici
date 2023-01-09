@@ -60,3 +60,28 @@ console.log(!(5 < 6));
 
 // CONDITIONAL (TERNARY)
 console.log(a == b ? 'This is equal!' : 'This is not equal!');
+
+
+/**************************************************
+ * ARRAYS
+**************************************************/
+
+// Creating an array
+// var items = new Array('cat', 'bee', 'ant eater');
+
+// Array literal
+let items = ['Plates', 'Knife', 'Glass'];
+//console.log(items)
+
+console.log(items[1]);
+console.log(items.length)
+
+// Push a new item into the array
+items.push('Fork');
+
+// Sort the Array
+items.sort();
+
+for (let i = 0; i < items.length; i++) {
+    console.log('Items of array are: ' + items[i]);
+}
