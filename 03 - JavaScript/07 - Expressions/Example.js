@@ -83,6 +83,12 @@ switch (new Date().getDay()) {
 *  i < 10 = izvrši ovaj dio koda (blok) dokle god je i manji od 10
 *  i++ = svaki put kada prođeš kroz ovaj blok, povećaj brojač za 1 (i++)
 */
-for(let i = 1; i < 10; i++){
+for (let i = 1; i < 10; i++) {
     console.log('Current counter is ' + i)
 }
+
+let count = 0; // Inicijalizacija i deklaracija varijable count
+do { // Do = NAPRAVI OVO (kod ispod)
+    console.log(count) // Console logaj COUNT
+    count++; // Povećaj count za 1
+} while (count < 10); // DOKLE GOD je COUNT < 10
