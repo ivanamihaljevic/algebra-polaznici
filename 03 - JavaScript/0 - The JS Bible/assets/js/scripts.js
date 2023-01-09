@@ -85,3 +85,6 @@ items.sort();
 for (let i = 0; i < items.length; i++) {
     console.log('Items of array are: ' + items[i]);
 }
+
+// Get the last item in an array
+console.log(items[items.length - 1])
