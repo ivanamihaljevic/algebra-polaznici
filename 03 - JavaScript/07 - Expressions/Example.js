@@ -76,3 +76,13 @@ switch (new Date().getDay()) {
         console.log('Today is Saturday')
         break;
 }
+
+// For Loop (i = iterable)
+/* 
+*  let i = deklariramo i inicijaliziramo varijablu (i) na 1
+*  i < 10 = izvrši ovaj dio koda (blok) dokle god je i manji od 10
+*  i++ = svaki put kada prođeš kroz ovaj blok, povećaj brojač za 1 (i++)
+*/
+for(let i = 1; i < 10; i++){
+    console.log('Current counter is ' + i)
+}
