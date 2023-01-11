@@ -88,3 +88,6 @@ for (let i = 0; i < items.length; i++) {
 
 // Get the last item in an array
 console.log(items[items.length - 1])
+
+// Reverse sort the array
+console.log(items.reverse())
