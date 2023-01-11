@@ -44,3 +44,36 @@ if (person.underage === false) {
 person.underage === false ? `${person.fullName()} is not underage.` : `${person.fullName()} is underage.`
 
 
+// Parse JSON to OBJECT
+let myJson = '{"homepage": "https://www.avatar.com/movies/avatar-the-way-of-water", "id": 76600, "imdb_id": "tt1630029", "original_language": "en", "original_title": "Avatar: The Way of Water", "overview": "Set more than a decade after the events of the first film, learn the story of the Sully family (Jake, Neytiri, and their kids), the trouble that follows them, the lengths they go to keep each other safe, the battles they fight to stay alive, and the tragedies they endure.", "popularity": 4029.588, "poster_path": "/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg"}';
+
+let myObject = JSON.parse(myJson);
+console.log(myObject)
+console.log(myObject.original_title)
+console.log(myObject.overview)
+
+// Another object example
+const phones = {
+    brand: {
+        manufacturer: 'Apple',
+        model: 'iPhone 13 Pro'
+    },
+    color: ['Sierra Blue', 'Silver', 'Gold', 'White'],
+    price: 999,
+    display: '6.1-inch display',
+    qty: 184,
+    checkStock: function () {
+        if (this.qty > 0) {
+            return 'in stock';
+        } else {
+            return 'out of stock';
+        }
+    }
+};
+
+console.log(phones.brand.model);
+console.log(phones.checkStock());
+
+// Converting an object into a JSON
+const myPhonesObject = JSON.stringify(phones);
+console.log(myPhonesObject);

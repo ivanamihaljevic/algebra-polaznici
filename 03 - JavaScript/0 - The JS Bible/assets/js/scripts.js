@@ -7,6 +7,7 @@
  * - Data Types & Operators
  * - Varibale Scope & Functions
  * - Arrays
+ * - Switch
  * - Objects
  * - Converting JSON into an object
  * - Converting an object into a JSON
@@ -26,7 +27,6 @@
  * - Cookies
  * - Local storage
  * - JEST Test
- * - Switch
  *----------------------------------------------------------------------------*/
 
 /**************************************************
@@ -91,3 +91,88 @@ console.log(items[items.length - 1])
 
 // Reverse sort the array
 console.log(items.reverse())
+
+/**************************************************
+ * SWITCH
+**************************************************/
+
+const expr = 'Papayas';
+switch (expr) {
+    case 'Oranges':
+        console.log('Oranges are $0.59 a pound.');
+        break;
+    case 'Mangoes':
+    case 'Papayas':
+        console.log('Mangoes and papayas are $2.79 a pound.');
+        // expected output: 'Mangoes and papayas are $2.79 a pound.'
+        break;
+    default:
+        console.log(`Sorry, we are out of ${expr}.`);
+}
+
+/**************************************************
+ * OBJECTS
+**************************************************/
+
+// Creating an object by using the new Object() method
+const myCar = new Object();
+myCar.make = 'Ford';
+myCar.model = 'Mustang';
+myCar.year = 1969;
+
+console.log(myCar);
+
+myCar.color = 'Blue';
+console.log(myCar);
+
+// Creating an object by using object literal
+const person = {
+    firstName: 'Nino',
+    lastName: 'Škuflić',
+    id: 115648972,
+    fullName: function () {
+        return this.firstName + ' ' + this.lastName;
+    }
+};
+
+console.log(person.id);
+console.log(person.lastName);
+console.log(person.fullName());
+
+// Converting JSON into an object
+myJSON = "{'name':'Nino', 'age':24, 'car':null}";
+myObject = JSON.parse(myJSON);
+
+console.log(myObject);
+console.log(myObject.age);
+
+// Another object example
+const phones = {
+    brand: {
+        manufacturer: 'Apple',
+        model: 'iPhone 13 Pro'
+    },
+    color: ['Sierra Blue', 'Silver', 'Gold', 'White'],
+    price: 999,
+    display: '6.1-inch display',
+    qty: 184,
+    checkStock: function () {
+        if (this.qty > 0) {
+            return 'in stock';
+        } else {
+            return 'out of stock';
+        }
+    }
+};
+
+console.log(phones.brand.model);
+console.log(phones.checkStock());
+
+// Converting an object into a JSON
+const myPhonesObject = JSON.stringify(phones);
+console.log(myPhonesObject);
+
+/**************************************************
+ * STRING INTERPOLATION
+**************************************************/
+console.log(`The selected phone ${phones.brand.model} is ${phones.checkStock()} and it's price is $${phones.price}.`);
