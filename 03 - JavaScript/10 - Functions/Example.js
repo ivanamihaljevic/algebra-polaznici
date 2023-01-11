@@ -26,6 +26,24 @@ greetMe(student);
 
     result = weight / (height * 2);
 
-    return alert(result.toFixed(2));
+    return alert(`Your BMI is: ${result.toFixed(2)}`);
 
 })();
+
+
+// Calculating numbers
+function add(a, b, c) {
+    return console.log(a + b + c)
+};
+
+add(5, 3, 0);
+add(1, 3, 4);
+add(1, 7, 3);
+
+
+// Variable as function
+let add = function(value){
+    return console.log(value + 1);
+}
+
+let result = add(1);
