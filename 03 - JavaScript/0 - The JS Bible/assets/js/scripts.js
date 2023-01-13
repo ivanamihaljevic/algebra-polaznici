@@ -176,3 +176,21 @@ console.log(myPhonesObject);
  * STRING INTERPOLATION
 **************************************************/
 console.log(`The selected phone ${phones.brand.model} is ${phones.checkStock()} and it's price is $${phones.price}.`);
+
+/**************************************************
+ * WINDOW METHODS
+**************************************************/
+
+// window.open();
+// window.close();
+console.log(window.innerWidth);
+console.log(window.innerHeight);
+
+console.log(window.location.hostname);
+
+/* The following code is also commented out because it is simply annoying. Feel free to uncomment it if you need it!
+
+window.location = 'https://www.example.com'; > This is commented out, otherwise our index.html would end up on example.com!
+window.alert('Hello! I am an alert box!');
+console.log('Return from confirm: ' + window.confirm('Do you like JavaScript?'));
+console.log('Return from prompt: ' + window.prompt('Please enter your name', 'Nino Škuflić')); */
