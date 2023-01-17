@@ -12,6 +12,7 @@
  * - Converting JSON into an object
  * - Converting an object into a JSON
  * - String interpolation
+ * - Constructor
  * - Prototypes
  * - Rest operator
  * - Spread operator
@@ -178,19 +179,83 @@ console.log(myPhonesObject);
 console.log(`The selected phone ${phones.brand.model} is ${phones.checkStock()} and it's price is $${phones.price}.`);
 
 /**************************************************
- * WINDOW METHODS
+ * CONSTRUCTOR
+ * Sometimes we need a "blueprint" for creating many objects of the same "type". 
+ * The way to create an "object type", is to use an object constructor function.
+ * In JavaScript, the this keyword refers to an object.
 **************************************************/
 
-// window.open();
-// window.close();
-console.log(window.innerWidth);
-console.log(window.innerHeight);
+// Constructor function for Person objects
+function Person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+}
 
-console.log(window.location.hostname);
+// Create a Person object
+const myFather = new Person("John", "Doe", 50, "blue");
 
-/* The following code is also commented out because it is simply annoying. Feel free to uncomment it if you need it!
+/**************************************************
+ * PROTOTYPES
+ * https://www.youtube.com/watch?v=4jb4AYEyhRc
+ * In JavaScript, a class is a set of objects that inherit properties from the same prototype object. 
+ * The prototype object, therefore, is the central feature of a class.
+ * 
+ * A prototype-based language has the notion of a prototypical object, an object used as a template from which to   get the initial properties for a new object.
+ * 
+ * __proto__ is the actual object that is used in the lookup chain to resolve methods, etc.
+ * prototype is the object that is used to build __proto__ when you create an object with new keyword
+ * So fundamentally _proto_ provides reference to the prototype object.
+**************************************************/
 
-window.location = 'https://www.example.com'; > This is commented out, otherwise our index.html would end up on example.com!
-window.alert('Hello! I am an alert box!');
-console.log('Return from confirm: ' + window.confirm('Do you like JavaScript?'));
-console.log('Return from prompt: ' + window.prompt('Please enter your name', 'Nino Škuflić')); */
+/*
+* Here we create an object personPrototype, which has a greet() method. 
+* We then use Object.create() to create a new object with personPrototype as its prototype. 
+* Now we can call greet() on the new object, and the prototype provides its implementation.
+*
+* Learn more: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes
+*/
+const personPrototype = {
+    greet() {
+        console.log("hello!");
+    },
+};
+
+const carl = Object.create(personPrototype);
+carl.greet();
+
+// Constructor Function
+function Person() {
+    this.name = 'Nino',
+        this.age = 24
+}
+
+// Creating a new person object from Person() constructor
+const person1 = new Person();
+const person2 = new Person();
+
+// Checking the prototype value
+console.log(Person.prototype); // { ... }
+
+// Adding property to constructor function
+Person.prototype.gender = 'male';
+
+// Prototype value of Person
+console.log(Person.prototype);
+
+// Inheriting the property from prototype
+console.log(person1.gender);
+console.log(person2.gender);
+
+// Adding a method to the constructor function
+Person.prototype.greet = function () {
+    console.log(`Hello ${this.firstName}`);
+};
+
+person1.greet(); // Hello Nino
+person2.greet(); // Hello Nino
+
+// Accessing prototype property (DEPRECATED)
+console.log(person1.__proto__); // { age: 24 }
+console.log(Object.getPrototypeOf(person1))
