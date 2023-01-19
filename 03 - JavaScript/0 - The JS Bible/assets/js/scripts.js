@@ -258,4 +258,56 @@ person2.greet(); // Hello Nino
 
 // Accessing prototype property (DEPRECATED)
 console.log(person1.__proto__); // { age: 24 }
-console.log(Object.getPrototypeOf(person1))
+console.log(Object.getPrototypeOf(person1));
+
+/**************************************************
+ * CLASSES
+ 
+ * Classes are in fact "special functions".
+ * Just as you can define function expressions and function declarations, a class can be defined in two ways: 
+ * a class expression or a class declaration.
+ 
+ * Classes are a template for creating objects. 
+ * They encapsulate data with code to work on that data. Classes in JS are built on prototypes but also have some syntax and semantics that are unique to classes.
+**************************************************/
+
+// Creating a Student class with a default constructor which takes 4 parameters
+// Declaration
+class Student {
+    /* 
+     * What is a constructor? That is a special method in the body of a class that initializes the instance. 
+     * That's the place where you set the initial values for the fields, or do any kind of object setup.
+     * In the following example the constructor sets the initial value of the field name, surname and years.
+     * Inside the constructor 'this' value equals to the newly created instance.
+     * The arguments used to instantiate the class become the parameters of the constructor.
+     */
+    constructor(firstName, lastName, years) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.years = years;
+    }
+    // Custom method
+    basicInfo() {
+        return `The student ${this.firstName} ${this.lastName} is ${this.years} years old. `;
+    }
+}
+
+let student1 = new Student('Nino', 'Škuflić', 24); // Creates an instance of the Student class
+console.log(student1.firstName); // You can access name field using a property accessor
+console.log(student1.basicInfo()); // Invoking the basicInfo() method on student
+
+class Report extends Student {
+    // This is our class constructor
+    constructor(firstName, lastName, years, grade) {
+        super(firstName, lastName, years);
+        this.grade = grade;
+    }
+    // Custom method
+    yearLevel() {
+        return `The student ${this.firstName} ${this.lastName} is a ${this.grade.toLowerCase()} student and he/she is ${this.years} years old.`;
+    }
+}
+
+
+let student2 = new Report('John', 'Smith', 24, 'Senior'); // Creates an instance of the Report class.
+console.log(student2.yearLevel());
