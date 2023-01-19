@@ -24,6 +24,7 @@
  * - Event listeners
  * - DOM Manipulation
  * - Classes
+ * - Async Functions
  * - API (connecting to API)
  * - Cookies
  * - Local storage
@@ -258,7 +259,160 @@ person2.greet(); // Hello Nino
 
 // Accessing prototype property (DEPRECATED)
 console.log(person1.__proto__); // { age: 24 }
-console.log(Object.getPrototypeOf(person1));
+console.log(Object.getPrototypeOf(person1))
+
+
+/**************************************************
+ * REST OPERATOR
+**************************************************/
+
+function showNames(...names) {
+    console.log(names);
+}
+
+const x = ['John', 'Jane', 'Doe', 'Smith', 'Jack'];
+showNames(x);
+
+
+function myFunction(a, b, ...c) {
+    console.log('A', a);
+    console.log('B', b);
+    console.log('C', c);
+}
+
+myFunction(1, 2, 3, 4, 5, 6, 7, 8, 9);
+
+/**************************************************
+ * SPREAD OPERATOR
+**************************************************/
+
+const arrayValues = ['My', 'name', 'is', 'Nino'];
+console.log(arrayValues); // [ 'My', 'name', 'is', 'Nino' ]
+
+// console.log(...arrayValues) is the same as console.log('My', 'name', 'is', 'Nino')
+
+console.log(...arrayValues); // My name is Nino
+
+const array3 = ['Nino', 'Škuflić'];
+const array4 = [...array3, 'works', 'at', 'IBM iX & Algebra'];
+
+console.log(array3); // ['Nino', 'Škuflić, 'works', 'at', 'IBM iX & Algebra']
+console.log(array4[0]); // Nino should be shown on position 0
+
+// ANOTHER EXAMPLE
+function sum(x, y, z) {
+    return x + y + z;
+}
+
+const numbers = [1, 2, 3];
+console.log(sum(...numbers));
+// expected output is 6
+
+/**************************************************
+ * WINDOW METHODS
+**************************************************/
+
+// window.open();
+// window.close();
+console.log(window.innerWidth);
+console.log(window.innerHeight);
+
+console.log(window.location.hostname);
+
+/* The following code is also commented out because it is simply annoying. Feel free to uncomment it if you need it!
+
+window.location = 'https://www.example.com'; > This is commented out, otherwise our index.html would end up on example.com!
+window.alert('Hello! I am an alert box!');
+console.log('Return from confirm: ' + window.confirm('Do you like JavaScript?'));
+console.log('Return from prompt: ' + window.prompt('Please enter your name', 'Nino Škuflić')); */
+
+
+/**************************************************
+ * REGULAR EXPRESSIONS (REGEXP)
+ * 
+ * TASK: Create an input field in HTML, which is used to enter the phone number, together with the SUBMIT button. 
+ * When the user enters their phone number and hits submit, verify that the CORRECT phone number is entered using regular expressions. 
+ * If it is, alert the phone number, if not, alert that the number is incorrect. You MUST NOT use the HTML attribute type.
+**************************************************/
+
+let input = 1; // Imagine that this is some input inputted by a user
+let regex = new RegExp('[0-9]'); // By using RegExp [0-9] we are allowing the user only to input the numbers from 0 to 9
+console.log(regex.test(input)); // Test if our input will pass the validation. Try changing the value of input variable to 'a' instead of 1
+
+let regex2 = new RegExp('[a-z]');
+let name2 = 'Nino';
+console.log(regex2.test(name2))
+
+/**************************************************
+ * MATRIX
+**************************************************/
+
+let activities = [
+    ['Work', 9],
+    ['Eat', 1],
+    ['Commute', 2],
+    ['Play Game', 1],
+    ['Sleep', 7]
+];
+
+console.table(activities);
+
+console.log(activities[0][0]);
+activities.push(['Study', 2]);
+console.table(activities);
+
+activities.forEach(element => console.log(element));
+
+
+/**************************************************
+ * FOR LOOP
+**************************************************/
+
+const array5 = ['Volvo', 'BMW', 'Audi', 'Toyota'];
+
+for (let i = 0; i < array5.length; i++) {
+    console.log(array5[i]);
+};
+
+/**************************************************
+ * DO WHILE LOOP
+**************************************************/
+
+let result = '';
+let j = 0;
+
+do {
+    j = j + 1;
+    result = result + j;
+} while (j < 5);
+
+console.log(result);
+
+/**************************************************
+ * EVENT LISTENERS
+**************************************************/
+
+document.getElementById('button-1').addEventListener('click', myButtonFunction);
+
+function myButtonFunction() {
+    document.getElementById('paragraph-1').innerHTML = 'You have clicked the button. Why?';
+}
+
+
+var dancingPanda = document.getElementsByClassName('panda-dancing')[0];
+dancingPanda.addEventListener('mouseenter', pandaDancing);
+
+function pandaDancing() {
+    document.getElementById('whoops').innerHTML = 'Whoops. It escaped!';
+    dancingPanda.style.position = 'absolute';
+    dancingPanda.style.right = '0px';
+}
+
+/**************************************************
+ * DOM MANIPULATION
+**************************************************/
+
+document.getElementsByClassName('footer-text')[0].innerHTML = `&copy; ${new Date().getFullYear()} Nino Škuflić - All rights reserved.<br>The width of your screen is ${window.innerWidth}px, and the height is ${window.innerHeight}px.<br> Oh, and by the way - today is ${Date()}.`;
 
 /**************************************************
  * CLASSES
@@ -310,11 +464,4 @@ class Report extends Student {
 
 
 let student2 = new Report('John', 'Smith', 24, 'Senior'); // Creates an instance of the Report class.
-console.log(student2.yearLevel());
-
-/**************************************************
- * REGULAR EXPRESSIONS (REGEXP)
-**************************************************/
-let regex2 = new RegExp('[a-z]');
-let name2 = 'Nino';
-console.log(regex2.test(name2))
+console.log(student1.yearLevel());
