@@ -311,3 +311,10 @@ class Report extends Student {
 
 let student2 = new Report('John', 'Smith', 24, 'Senior'); // Creates an instance of the Report class.
 console.log(student2.yearLevel());
+
+/**************************************************
+ * REGULAR EXPRESSIONS (REGEXP)
+**************************************************/
+let regex2 = new RegExp('[a-z]');
+let name2 = 'Nino';
+console.log(regex2.test(name2))
