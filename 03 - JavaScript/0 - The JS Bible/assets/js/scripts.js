@@ -465,3 +465,42 @@ class Report extends Student {
 
 let student2 = new Report('John', 'Smith', 24, 'Senior'); // Creates an instance of the Report class.
 console.log(student1.yearLevel());
+
+/**************************************************
+ * ARROW FUNCTIONS
+**************************************************/
+
+hello = () => {
+    return 'Hello, class!';
+}
+
+// Shorter way to write Arrow Function
+hello2 = () => 'Hello, class!';
+
+// Arrow function with params
+hello3 = (name) => 'Hello, ' + name;
+
+// Shorter way to write Arrow Function with params
+hello4 = name => 'Hello, ' + name;
+
+/**************************************************
+ * ASYNC FUNCTIONS
+**************************************************/
+
+let promise = new Promise(function (resolve, reject) {
+    setTimeout(function () {
+        resolve('Promise resolved')
+    }, 2000);
+});
+
+async function asyncFunction() {
+    try {
+        let result = await promise;
+        console.log(result);
+        console.log('Hello, class!');
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+asyncFunction();
