@@ -48,9 +48,9 @@
                 <tr>
                 <td>${i.breed}</td>
                 <td>${i.country}</td>
-                <td>${i.origin}</td>
+                <td>${i.origin == "" ? 'Undefined' : i.origin}</td>
                 <td>${i.coat}</td>
-                <td>${i.pattern}</td>
+                <td>${i.pattern == "" ? 'Undefined' : i.pattern}</td>
                 </tr>`;
             }
 

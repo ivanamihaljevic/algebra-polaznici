@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session & Local Storage | Cookies</title>
+</head>
+
+<body>
+    <h1>Check the Application Tab in DevTools. :)</h1>
+    <p id="user"></p>
+    <script>
+
+        (function cookies() {
+            document.cookie = "username=Nino Škuflić; expires=Thu, 31 Dec 2023 12:00:00 UTC; path=/; Secure;"
+            let getCookie = console.log('Cookie is ' + document.cookie);
+        })()
+
+        function storage() {
+            localStorage.setItem('user', 'Nino Škuflić');
+            let user = localStorage.getItem('user');
+            document.getElementById('user').innerHTML = user;
+            localStorage.setItem('age', '25 years');
+            localStorage.clear();
+        }
+    </script>
+</body>
+
+</html>
