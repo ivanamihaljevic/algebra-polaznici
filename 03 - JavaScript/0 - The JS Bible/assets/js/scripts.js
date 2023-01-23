@@ -135,7 +135,7 @@ const person = {
     id: 115648972,
     fullName: function () {
         return this.firstName + ' ' + this.lastName;
-    }
+    },
 };
 
 console.log(person.id);
@@ -143,11 +143,11 @@ console.log(person.lastName);
 console.log(person.fullName());
 
 // Converting JSON into an object
-myJSON = "{'name':'Nino', 'age':24, 'car':null}";
-myObject = JSON.parse(myJSON);
+//myJSON = "{ 'name':'Nino', 'age':24, 'car': 'toyota' }";
+//myObject = JSON.parse(myJSON);
 
-console.log(myObject);
-console.log(myObject.age);
+//console.log(myObject);
+//console.log(myObject.age);
 
 // Another object example
 const phones = {
@@ -530,3 +530,68 @@ fetch('https://catfact.ninja/fact')
     .then(response => response.json())
     .then(data => document.getElementById('catFact').innerHTML = `${data.fact}`)
     .catch(error => alert(error));
+
+
+/**************************************************
+ * COOKIES
+**************************************************/
+
+document.cookie = 'username=Nino Škuflić; expires=Thu, 31 Dec 2023 12:00:00 UTC; path=/; Secure;'; // Set cookie
+let getCookie = 'Cookie is' + document.cookie;
+
+/**************************************************
+ * LOCAL STORAGE
+**************************************************/
+
+localStorage.setItem('username', 'ninoskuflic'); // Add to local storage
+localStorage.setItem('course', 'Front-End Development');
+
+localStorage.getItem('name'); // Get local storage item with identifier 'NAME'
+localStorage.removeItem('name'); // Remove a local storage item with identifier 'NAME'
+localStorage.clear(); // Remove (delete) all local storage items
+
+
+/**************************************************
+ * FUNCTIONS (TEST CASES)
+**************************************************/
+
+// A function which we will test using JEST
+function sum(a, b) {
+    return a + b;
+}
+
+// Test case - we're testing to see if a function sum will return a value of 11 once we input 6 and 5 as parameters
+test('Zbrajanje - 6 + 5 = 11', () => {
+    expect(sum(6, 5)).toBe(11); // What output do we expect?
+});
+
+// Array called shoppingList
+const shoppingList = [
+    'dipers',
+    'eggs',
+    'flour',
+    'milk',
+    'apples'
+];
+
+// Test case
+test('Does my shopping list contains eggs?', () => {
+    expect(shoppingList).toContain('eggs');
+});
+
+// Test case
+test('Is our constant a null?', () => {
+    const ns = null;
+    expect(ns).toBeNull();
+    expect(ns).toBeDefined();
+    expect(ns).not.toBeUndefined();
+});
+
+// Test case
+test('Adding positive numbers is not a zero', () => {
+    for (let i = 1; i < 10; i++) {
+        for (let j = 1; j < 10; j++) {
+            expect(i + j).not.toBe(0);
+        }
+    }
+});
