@@ -1,0 +1,10 @@
+1. Pratite kod u scripts.js.
+
+2. Nadite prototip objekta "character" (naputak: koristite metode globalnog Object objekta). Nadite prototip tog prototipa. Ispisite ih.
+
+// Object.getPrototypeOf
+
+3. Dodajte prototipu objekta "character" funkciju koja vraća jedan (slucajno odabran) citat iz niz "quotes".
+
+// istražiti prototype property na objektima (npr. character.prototype)
+// Math.random()

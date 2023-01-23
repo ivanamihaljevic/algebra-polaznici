@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Facts API</title>
+</head>
+
+<body>
+    <h3>Svaki put kada osvježite stranicu, pokazati ću Vam nausmičnu činjenicu o mački.</h3>
+    <hr>
+    <p id='catFact'></p>
+    <script>
+        fetch(`https://catfact.ninja/fact`)
+            .then(function response() {
+                return response.json();
+            })
+            .then(data => document.getElementById('catFact').innerHTML = `${data.fact}`)
+            .catch(error => alert(error))
+    </script>
+</body>
+
+</html>
