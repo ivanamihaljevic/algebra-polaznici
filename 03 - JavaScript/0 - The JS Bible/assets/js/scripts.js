@@ -25,6 +25,7 @@
  * - DOM Manipulation
  * - Classes
  * - Async Functions
+ * - Arrow Functions
  * - API (connecting to API)
  * - Cookies
  * - Local storage
@@ -467,6 +468,35 @@ let student2 = new Report('John', 'Smith', 24, 'Senior'); // Creates an instance
 console.log(student1.yearLevel());
 
 /**************************************************
+ * ASYNC FUNCTIONS
+ * The async function declaration declares an async function where the await keyword is permitted within the function body. The async and await keywords enable asynchronous, promise-based behavior to be written in a cleaner style, avoiding the need to explicitly configure promise chains.
+ * https://www.programiz.com/javascript/async-await
+**************************************************/
+
+// A promise
+let promise = new Promise(function (resolve, reject) {
+    setTimeout(function () {
+        resolve('Promise resolved')
+    }, 4000);
+});
+
+// Async function
+async function asyncFunc() {
+    try {
+        // wait until the promise resolves 
+        let result = await promise;
+        console.log(result);
+        console.log('Hello, class!');
+    }
+    catch (error) {
+        console.log(error);
+    }
+}
+
+// Calling the async function
+asyncFunc(); // Promise resolved
+
+/**************************************************
  * ARROW FUNCTIONS
 **************************************************/
 
@@ -484,23 +514,19 @@ hello3 = (name) => 'Hello, ' + name;
 hello4 = name => 'Hello, ' + name;
 
 /**************************************************
- * ASYNC FUNCTIONS
+ * CONNECTING TO API'S
 **************************************************/
 
-let promise = new Promise(function (resolve, reject) {
-    setTimeout(function () {
-        resolve('Promise resolved')
-    }, 2000);
-});
+// Guess the age of a person based on their name
+const userInput = window.prompt(`Enter your name:`);
+fetch(`https://api.agify.io/?name=${userInput}`)
+    .then(response => response.json())
+    .then(data => alert(`${data.name}, you are ${data.age} year(s) old.`))
+    .catch(error => alert(error));
 
-async function asyncFunction() {
-    try {
-        let result = await promise;
-        console.log(result);
-        console.log('Hello, class!');
-    } catch (error) {
-        console.log(error);
-    }
-}
 
-asyncFunction();
+// Display a random cat fact
+fetch('https://catfact.ninja/fact')
+    .then(response => response.json())
+    .then(data => document.getElementById('catFact').innerHTML = `${data.fact}`)
+    .catch(error => alert(error));
