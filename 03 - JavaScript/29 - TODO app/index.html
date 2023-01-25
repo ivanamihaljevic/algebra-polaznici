@@ -33,7 +33,7 @@
 </head>
 
 <body>
-    <div class="loading" id="loading">
+    <!-- <div class="loading">
         <div class="line-logo">
             <svg viewbox='0 0 82 66'>
                 <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="1.5" class="lines">
@@ -42,7 +42,7 @@
                 </g>
             </svg>
         </div>
-    </div>
+    </div> -->
     <div class="container">
         <main>
             <div class="header">
@@ -62,6 +62,16 @@
                 </div>
             </div>
         </main>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <p>Please enter your new name and click the save button. <br />Once that has been done, refresh the page
+                    to see the changes.</p>
+                <input type="text" id="name" placeholder="First name" required>
+                <span class="save" id="save">Save</span>
+            </div>
+        </div>
 
         <footer>
             <a href="https://acme.example.com/terms">Terms of Use</a> |

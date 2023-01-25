@@ -7,3 +7,8 @@ anime({
     direction: 'alternate',
     loop: true
 });
+
+setTimeout(() => {
+    document.getElementsByClassName('loading')[0].style.display = 'none';
+}, 3000)
+
