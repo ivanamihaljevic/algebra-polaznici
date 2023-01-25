@@ -51,7 +51,7 @@
                     <h2 id="greeting">Good Morning</h2>
                     <p>
                         <span>Nino</span>, focus from work to play with the best to do list app
-                        <span>(not you?)</span>
+                        <span class="change-name" id="button">(not you?)</span>
                         <br />
                         <span>January 25th, 2023</span>
                     </p>
@@ -69,7 +69,7 @@
                 <p>Please enter your new name and click the save button. <br />Once that has been done, refresh the page
                     to see the changes.</p>
                 <input type="text" id="name" placeholder="First name" required>
-                <span class="save" id="save">Save</span>
+                <span class="save" id="save" onclick="setUser()">Save</span>
             </div>
         </div>
 

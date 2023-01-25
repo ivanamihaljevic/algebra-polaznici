@@ -12,3 +12,18 @@ setTimeout(() => {
     document.getElementsByClassName('loading')[0].style.display = 'none';
 }, 3000)
 
+/**
+ * MODAL 
+ */
+var modal = document.getElementById('modal');
+var button = document.getElementById('button');
+var span = document.getElementsByClassName('close-modal')[0];
+
+// Pokaži modal kada korisnik klikne na "not you?"
+button.onclick = function () {
+    modal.style.display = 'block';
+}
+
+span.onclick = function () {
+    modal.style.display = 'none';
+}
