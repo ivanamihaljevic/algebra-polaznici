@@ -53,11 +53,39 @@ const welcomeTypes = ['Good Morning', 'Good Afternoon', 'Good Evening'];
 let welcomeText = '';
 
 if (hour < 12) {
-    welcomeText = welcomeTypes[0]
+    welcomeText = welcomeTypes[0];
 } else if (hour < 18) {
-    welcomeText = welcomeTypes[1]
+    welcomeText = welcomeTypes[1];
 } else {
-    welcomeText = welcomeTypes[2]
+    welcomeText = welcomeTypes[2];
 }
 
-greeting.innerHTML = `${welcomeText}`
+greeting.innerHTML = `${welcomeText}`;
+
+/*
+ * DATE
+ */
+
+const options = { weekday: 'long', month: 'long', day: 'numeric' };
+let date = new Date();
+document.getElementById('date').innerHTML = date.toLocaleDateString('en-US', options);
+
+/*
+ * SET USER'S NAME
+ */
+
+function setUser() {
+    let name = document.getElementById('name').value;
+    localStorage.setItem('user', name);
+    let modal = document.getElementById('modal');
+    modal.style.display = 'none';
+}
+
+(function showUser() {
+    let user = localStorage.getItem('user');
+    document.getElementById('user').innerText = `${!user ? 'Hey there stranger' : user}`;
+})();
+
+/*
+ * TO DO LIST
+ */
