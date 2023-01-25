@@ -1,3 +1,7 @@
+/**
+ * ANIMATE THE INTRO LOGO 
+ */
+
 anime({
     targets: '.line-logo .lines path',
     strokeDashoffset: [anime.setDashoffset, 0],
@@ -19,7 +23,7 @@ var modal = document.getElementById('modal');
 var button = document.getElementById('button');
 var span = document.getElementsByClassName('close-modal')[0];
 
-// Pokaži modal kada korisnik klikne na "not you?"
+// When a user clicks 'not you?', show them a modal
 button.onclick = function () {
     modal.style.display = 'block';
 }
@@ -30,7 +34,7 @@ span.onclick = function () {
 
 window.onclick = function (event) {
     if (event.target == modal) {
-        // console.log(event.target) // Referenca na objekt
+        // console.log(event.target) // Object reference
         modal.style.display = 'none';
     }
 }
@@ -90,6 +94,7 @@ function setUser() {
  * TO DO LIST
  */
 
+// Create <span> add class='close' to each <span> 
 const myNodeList = document.getElementsByTagName('li');
 var i;
 for (i = 0; i < myNodeList.length; i++) {
@@ -100,3 +105,20 @@ for (i = 0; i < myNodeList.length; i++) {
     myNodeList[i].appendChild(span);
 }
 
+// Get each <span> with class='close', add event listener on them, once they are being clicked, remove them from DOM
+const close = document.getElementsByClassName('close');
+var i;
+for (i = 0; i < close.length; i++) {
+    close[i].onclick = function () {
+        const div = this.parentElement;
+        div.remove();
+    }
+}
+
+// Add a 'checkmark' next to each task, and strikethrough each of them
+const list = document.querySelector('ul');
+list.addEventListener('click', function (event) {
+    if (event.target.tagName === 'LI') {
+        event.target.classList.toggle('checked');
+    }
+}, false)
