@@ -167,6 +167,7 @@ ul {
     margin-right: 40px;
 
     li {
+        position: relative;
         cursor: pointer;
         padding: 12px 8px 12px 8px;
         list-style-type: none;
@@ -178,5 +179,21 @@ ul {
         border-radius: 3px;
         border: 1px solid #EFEFEF;
         margin-bottom: 10px;
+
+        .close {
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: 12px 16px 12px 16px;
+            border-top-right-radius: 2px;
+            border-bottom-right-radius: 2px;
+
+            &:hover {
+                transition: 0.3s;
+                background-color: #202020;
+                color: white;
+            }
+
+        }
     }
 }
