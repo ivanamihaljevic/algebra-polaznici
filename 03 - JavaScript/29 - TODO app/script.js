@@ -118,7 +118,7 @@ for (i = 0; i < close.length; i++) {
 // Add a 'checkmark' next to each task, and strikethrough each of them
 const list = document.querySelector('ul');
 list.addEventListener('click', function (event) {
-    if (event.target.tagName == 'LI') {
+    if (event.target.tagName.toLowerCase() == 'li') {
         event.target.classList.toggle('checked');
     }
 }, false)
