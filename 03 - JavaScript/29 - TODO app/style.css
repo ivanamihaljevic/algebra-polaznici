@@ -68,4 +68,19 @@ input {
 }
 .add:hover {
   background-color: #202020;
+}
+
+footer {
+  font-weight: 300;
+  font-size: 11px;
+  padding: 30px 40px;
+  color: #b0adad;
+}
+footer a {
+  color: #b0adad;
+  text-decoration: none;
+}
+
+.post {
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
