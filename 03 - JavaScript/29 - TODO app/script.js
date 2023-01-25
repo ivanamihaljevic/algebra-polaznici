@@ -8,9 +8,9 @@ anime({
     loop: true
 });
 
-setTimeout(() => {
-    document.getElementsByClassName('loading')[0].style.display = 'none';
-}, 3000)
+// setTimeout(() => {
+//     document.getElementsByClassName('loading')[0].style.display = 'none';
+// }, 3000)
 
 /**
  * MODAL 
@@ -27,3 +27,37 @@ button.onclick = function () {
 span.onclick = function () {
     modal.style.display = 'none';
 }
+
+window.onclick = function (event) {
+    if (event.target == modal) {
+        // console.log(event.target) // Referenca na objekt
+        modal.style.display = 'none';
+    }
+}
+
+/*
+ * FOOTER
+ */
+
+const year = new Date().getFullYear();
+document.getElementById('year').innerText = year;
+
+/*
+ * GREETING
+ */
+
+const greeting = document.getElementById('greeting');
+const hour = new Date().getHours();
+const welcomeTypes = ['Good Morning', 'Good Afternoon', 'Good Evening'];
+
+let welcomeText = '';
+
+if (hour < 12) {
+    welcomeText = welcomeTypes[0]
+} else if (hour < 18) {
+    welcomeText = welcomeTypes[1]
+} else {
+    welcomeText = welcomeTypes[2]
+}
+
+greeting.innerHTML = `${welcomeText}`
