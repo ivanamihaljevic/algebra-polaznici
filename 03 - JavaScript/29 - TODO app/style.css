@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+.main img {
+  width: 76px;
+  float: left;
+  margin-right: 15px;
+}
+
+.header {
+  background-color: #EFF1F7;
+  padding: 40px;
+  color: #202020;
+  min-height: 217px;
+}/*# sourceMappingURL=style.css.map */
