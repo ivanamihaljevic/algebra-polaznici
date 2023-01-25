@@ -149,4 +149,21 @@ footer a {
 .change-name {
   cursor: pointer;
   text-decoration: underline;
+}
+
+ul {
+  margin-right: 40px;
+}
+ul li {
+  cursor: pointer;
+  padding: 12px 8px 12px 8px;
+  list-style-type: none;
+  background: #FFF;
+  color: #292827;
+  font-weight: 300;
+  font-size: 13px;
+  transition: 0.2s;
+  border-radius: 3px;
+  border: 1px solid #EFEFEF;
+  margin-bottom: 10px;
 }/*# sourceMappingURL=style.css.map */
