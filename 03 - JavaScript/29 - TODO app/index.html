@@ -33,7 +33,7 @@
 </head>
 
 <body>
-    <div class="loading" id="loading">
+    <div class="loading">
         <div class="line-logo">
             <svg viewbox='0 0 82 66'>
                 <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="1.5" class="lines">
@@ -48,27 +48,43 @@
             <div class="header">
                 <div class="main">
                     <a href=""><img src="assets/logo.svg" alt="To Do"></a>
-                    <h2 id="greeting">Good Morning</h2>
+                    <h2 id="greeting"></h2>
                     <p>
-                        <span>Nino</span>, focus from work to play with the best to do list app
-                        <span>(not you?)</span>
+                        <span id="user"></span>, focus from work to play with the best to do list app
+                        <span class="change-name" id="button">(not you?)</span>
                         <br />
-                        <span>January 25th, 2023</span>
+                        <span id="date"></span>
                     </p>
                 </div>
                 <div>
                     <input type="text" id="inputField" placeholder="Add a task...">
-                    <button class="add">Add</button>
+                    <button class="add" id="add" onclick="newTask()">Add</button>
                 </div>
+                <span id="error">You must write a task before you can add it to the list.</span>
             </div>
+
+            <ul id="list">
+                <li>This is your first task</li>
+            </ul>
+
         </main>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <p>Please enter your new name and click the save button. <br />Once that has been done, refresh the page
+                    to see the changes.</p>
+                <input type="text" id="name" placeholder="First name" required>
+                <span class="save" id="save" onclick="setUser()">Save</span>
+            </div>
+        </div>
 
         <footer>
             <a href="https://acme.example.com/terms">Terms of Use</a> |
             <a href="https://acme.example.com/terms">Privacy Policy</a> |
-            <a class="post">Post to server</a>
+            <a class="post" onclick="share()">Post to server</a>
             </br>
-            Copyright &copy; 2023 Acme Corporation. To Do is a trademark of Acme
+            Copyright &copy; <span id="year"></span> Acme Corporation. To Do is a trademark of Acme
             Corporation.
         </footer>
     </div>

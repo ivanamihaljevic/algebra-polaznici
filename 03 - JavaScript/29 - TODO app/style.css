@@ -83,4 +83,127 @@ footer a {
 
 .post {
   cursor: pointer;
+}
+
+.loading {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: #EFF1F7;
+  color: #185ABD;
+  z-index: 1;
+}
+.loading svg {
+  width: 100%;
+}
+.loading .line-logo {
+  width: 10%;
+  left: 45%;
+  top: 45%;
+  position: absolute;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal .save {
+  padding: 11px;
+  height: 37px;
+  font-size: 14px;
+  color: white;
+  background: #2564CF;
+  text-transform: uppercase;
+  float: right;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 0;
+  width: 25%;
+  text-align: center;
+}
+.modal .save:hover {
+  background-color: #202020;
+}
+.modal .modal-content {
+  background-color: #FEFEFE;
+  margin: 15% auto;
+  padding: 20px;
+  width: 50%;
+}
+.modal input {
+  border: 1px solid #EFEFEF;
+  font-weight: 300;
+}
+.modal .close-modal {
+  float: right;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.change-name {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+ul {
+  margin-right: 40px;
+}
+ul li {
+  position: relative;
+  cursor: pointer;
+  padding: 12px 8px 12px 8px;
+  list-style-type: none;
+  background: #FFF;
+  color: #292827;
+  font-weight: 300;
+  font-size: 13px;
+  transition: 0.2s;
+  border-radius: 3px;
+  border: 1px solid #EFEFEF;
+  margin-bottom: 10px;
+}
+ul li .close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+ul li .close:hover {
+  transition: 0.3s;
+  background-color: #202020;
+  color: white;
+}
+ul li.checked {
+  color: #605E5C;
+  text-decoration: line-through;
+  padding: 12px 8px 12px 35px;
+}
+ul li.checked::before {
+  content: "";
+  position: absolute;
+  border-color: #605E5C;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 17px;
+  transform: rotate(45deg);
+  height: 12px;
+  width: 5px;
+}
+
+#error {
+  color: #605E5C;
+  text-align: left;
+  font-weight: 300;
+  margin-left: 10px;
+  font-size: 10px;
+  display: none;
 }/*# sourceMappingURL=style.css.map */
