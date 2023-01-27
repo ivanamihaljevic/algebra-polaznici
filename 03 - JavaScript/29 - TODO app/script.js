@@ -173,6 +173,18 @@ function share() {
         objects[i] = { task: listItems[i].firstChild.nodeValue }
     }
 
-    console.log(objects);
+    (async () => {
+
+        const response = await fetch('https://63d16499d5f0fa7fbdca8666.mockapi.io/tasks', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(objects)
+        })
+
+        return console.log(response.json());
+
+    })();
 
 }
