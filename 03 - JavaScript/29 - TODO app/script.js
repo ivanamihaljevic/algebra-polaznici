@@ -120,6 +120,10 @@ const list = document.querySelector('ul');
 list.addEventListener('click', function (event) {
     if (event.target.tagName.toLowerCase() == 'li') {
         event.target.classList.toggle('checked');
+        if (document.querySelector('li').classList.contains('checked')) {
+            const audio = new Audio('assets/audio/ping.mp3');
+            audio.play();
+        }
     }
 }, false)
 
