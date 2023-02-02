@@ -273,4 +273,18 @@ footer a {
 
 .post {
   cursor: pointer;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  p {
+    font-size: 12px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  .line-logo {
+    top: 45% !important;
+    width: 35% !important;
+    left: 35% !important;
+  }
 }/*# sourceMappingURL=style.css.map */

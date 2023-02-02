@@ -1,4 +1,4 @@
-const CACHE_NAME = `todo-app-acme`;
+const CACHE_NAME = `todo-app-skuflic`;
 
 // Use the install event to pre-cache all initial resources.
 self.addEventListener('install', event => {
