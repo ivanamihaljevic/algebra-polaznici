@@ -1,47 +1,56 @@
-// Dajemo ključnu riječ function, dajemo ime funkciji, otvaramo i zatvaramo obične i vitičaste zagrade
-function greet() {
-    return console.log('Hello there');
+/************************************ 
+Simple Function Example
+*********************************** */
+function nameOfFunction() {
+    // function body   
 }
 
-greet();
-
-// Function with parameter
-function greetMe(student) {
-    console.log('Hello there, ' + student)
+function greet() { // declaring a function named greet()
+    console.log('Hello there');
 }
-let student = prompt('Enter your name: ')
-greetMe(student);
 
-// Self invoking function
-(function selfInvoked() {
-    console.log('Hey, look at me. I invoked myself.')
-})();
+greet(); // function call
 
-// BMI Calculaor
+/************************************ 
+Example 1: Function with Parameters
+*********************************** */
+function greet(student) {
+    console.log('Hello ' + student + ':)');
+}
+
+let student = prompt('Enter a name: '); // variable name can be different
+
+greet(student); // calling function
+
+
+/************************************ 
+Example 2: Self Invoking Function - BMI Calculator
+*********************************** */
 (function calculateBMI() {
     let result;
-    let person = prompt('Please enter your name: ');
-    let height = prompt(`What is your height, ${person}: `);
-    let weight = prompt(`What is your weight, ${person}: `);
+    let person = prompt('Please enter your name: ', '');
+    let weight = prompt(`What is your weight, ${person}? `, '');
+    let height = prompt(`And lastly, ${person}, what is your height (in m2) `, '');
 
     result = weight / (height * 2);
 
-    return alert(`Your BMI is: ${result.toFixed(2)}`);
-
+    alert(result.toFixed(2));
 })();
 
 
-// Calculating numbers
-function add(a, b, c) {
-    return console.log(a + b + c)
-};
+/************************************ 
+Example 3: Adding two numbers
+*********************************** */
+function add(a, b) {
+    console.log(a + b);
+}
 
-add(5, 3, 0);
-add(1, 3, 4);
-add(1, 7, 3);
+add(3, 4); // calling functions
+add(2, 9); // calling functions
 
-
-// Variable as function
+/************************************ 
+Example 4: Variable as function
+*********************************** */
 let add = function(value){
     return console.log(value + 1);
 }

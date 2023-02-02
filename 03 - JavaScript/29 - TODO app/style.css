@@ -1,5 +1,7 @@
 body {
   margin: 0;
+  min-width: 250px;
+  overflow-x: hidden;
 }
 
 * {
@@ -17,175 +19,72 @@ main {
   flex: 1;
 }
 
+.main {
+  margin-bottom: 30px;
+}
+
 h2 {
+  text-align: left;
   font-weight: 400;
   font-size: 20px;
   margin-bottom: 0px;
 }
 
+h4 {
+  text-align: left;
+  font-weight: 300;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
 p {
   margin-top: 5px;
+  text-align: left;
   font-weight: 200;
   font-size: 14px;
 }
 
 .main img {
-  width: 76px;
+  width: 75px;
   float: left;
   margin-right: 15px;
 }
 
-.header {
-  background-color: #EFF1F7;
-  padding: 40px;
-  color: #202020;
-  min-height: 217px;
-}
-
-input {
-  margin: 0;
-  border: 0;
-  border-radius: 0;
-  width: 75%;
-  padding: 10px;
-  font-size: 13px;
-  font-weight: 300;
-}
-
-.add {
-  padding: 10px;
-  border: 0;
-  width: 25%;
-  background-color: #2564CF;
-  font-size: 13px;
-  font-weight: 500;
-  text-transform: uppercase;
-  color: white;
-  text-align: center;
-  cursor: pointer;
-  transition: 0.3s;
-  margin-left: -4px;
-}
-.add:hover {
-  background-color: #202020;
-}
-
-footer {
-  font-weight: 300;
-  font-size: 11px;
-  padding: 30px 40px;
-  color: #b0adad;
-}
-footer a {
-  color: #b0adad;
-  text-decoration: none;
-}
-
-.post {
-  cursor: pointer;
-}
-
-.loading {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  background-color: #EFF1F7;
-  color: #185ABD;
-  z-index: 1;
-}
-.loading svg {
-  width: 100%;
-}
-.loading .line-logo {
-  width: 10%;
-  left: 45%;
-  top: 45%;
-  position: absolute;
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 2;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-.modal .save {
-  padding: 11px;
-  height: 37px;
-  font-size: 14px;
-  color: white;
-  background: #2564CF;
-  text-transform: uppercase;
-  float: right;
-  cursor: pointer;
-  transition: 0.3s;
-  border: 0;
-  width: 25%;
-  text-align: center;
-}
-.modal .save:hover {
-  background-color: #202020;
-}
-.modal .modal-content {
-  background-color: #FEFEFE;
-  margin: 15% auto;
-  padding: 20px;
-  width: 50%;
-}
-.modal input {
-  border: 1px solid #EFEFEF;
-  font-weight: 300;
-}
-.modal .close-modal {
-  float: right;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.change-name {
-  cursor: pointer;
-  text-decoration: underline;
-}
-
+/* Remove margins and padding from the list */
 ul {
   margin-right: 40px;
 }
+
+/* Style the list items */
 ul li {
-  position: relative;
   cursor: pointer;
-  padding: 12px 8px 12px 8px;
+  position: relative;
+  padding: 12px 8px 12px 10px;
   list-style-type: none;
-  background: #FFF;
+  background: #fff;
   color: #292827;
   font-weight: 300;
   font-size: 13px;
   transition: 0.2s;
   border-radius: 3px;
-  border: 1px solid #EFEFEF;
+  border: 1px solid #efefef;
   margin-bottom: 10px;
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
-ul li .close {
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 12px 16px 12px 16px;
-  border-top-right-radius: 2px;
-  border-bottom-right-radius: 2px;
-}
-ul li .close:hover {
-  transition: 0.3s;
-  background-color: #202020;
-  color: white;
-}
+
+/* When clicked on, add a background color and strike out text */
 ul li.checked {
   color: #605E5C;
   text-decoration: line-through;
   padding: 12px 8px 12px 35px;
 }
+
+/* Add a 'checked' mark when clicked on */
 ul li.checked::before {
   content: "";
   position: absolute;
@@ -199,11 +98,179 @@ ul li.checked::before {
   width: 5px;
 }
 
+/* Style the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.close:hover {
+  transition: 0.3s;
+  background-color: #242423;
+  color: white;
+}
+
+/* Style the header */
+.header {
+  background-color: #EFF1F7;
+  padding: 40px 40px;
+  color: #202020;
+  min-height: 217px;
+}
+
+/* Style the input */
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+input::-moz-placeholder {
+  font-size: 13px;
+  font-weight: 300;
+}
+
+input:-ms-input-placeholder {
+  font-size: 13px;
+  font-weight: 300;
+}
+
+input::placeholder {
+  font-size: 13px;
+  font-weight: 300;
+}
+
+/* Style the 'Add' button */
+.add {
+  padding: 10px;
+  border: 0;
+  width: 25%;
+  background: #2564CF;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+  margin-left: -4px;
+}
+
+.add:hover {
+  background-color: #202020;
+}
+
+.change-name {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  /* The Close Button */
+}
+.modal .save {
+  padding: 11px;
+  height: 37px;
+  width: 25%;
+  background: #2564CF;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: white;
+  float: right;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+.modal .save:hover {
+  background-color: #151515;
+}
+.modal .modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  width: 50%;
+}
+.modal input {
+  float: inherit;
+  font-weight: 300;
+  border: 1px solid #EFEFEF;
+}
+.modal ::-moz-placeholder {
+  font-weight: 300;
+}
+.modal :-ms-input-placeholder {
+  font-weight: 300;
+}
+.modal ::placeholder {
+  font-weight: 300;
+}
+.modal .close-modal {
+  float: right;
+  font-weight: bold;
+  float: right;
+  cursor: pointer;
+}
+
+footer {
+  text-align: left;
+  font-weight: 300;
+  font-size: 11px;
+  padding: 30px 40px;
+  color: #b0adad;
+}
+footer a {
+  color: #b0adad;
+  text-decoration: none;
+}
+
+.loading {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: #EFF1F7;
+  z-index: 999;
+  color: #185ABD;
+}
+.loading svg {
+  width: 100%;
+}
+.loading .line-logo {
+  position: absolute;
+  top: 45%;
+  width: 10%;
+  left: 45%;
+}
+
 #error {
-  color: #605E5C;
+  color: #757575;
   text-align: left;
   font-weight: 300;
   margin-left: 10px;
   font-size: 10px;
   display: none;
+}
+
+.post {
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

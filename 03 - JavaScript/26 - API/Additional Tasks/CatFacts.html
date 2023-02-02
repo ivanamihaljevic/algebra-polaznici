@@ -1,0 +1,19 @@
+<html>
+
+<head>
+    <title>Cat Facts API</title>
+</head>
+
+<body>
+    <p>Svaki put kada osvježite stranicu, pokazati ću Vam nausmičnu činjenicu o mački.</p>
+    <p id='catFact'></p>
+
+    <script>
+        fetch('https://catfact.ninja/fact')
+            .then(response => response.json()) // Uzimamo response, konvertiramo ga iz JSON-a u objekt
+            .then(data => document.getElementById('catFact').innerHTML = `${data.fact}`) // Postavljamo podatke koristeći key
+            .catch(error => alert(error));
+    </script>
+</body>
+
+</html>

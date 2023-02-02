@@ -1,0 +1,25 @@
+{
+  "name": "@ninoskuflic/tiny",
+  "version": "2.0.0",
+  "description": "Removes all spaces from a string - useless, but beautiful.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ninoskuflic/tiny.git"
+  },
+  "main": "index.js",
+  "keywords": [
+    "tiny",
+    "npm",
+    "package",
+    "ninoskuflic"
+  ],
+  "bugs": {
+    "url": "https://github.com/ninoskuflic/tiny/issues"
+  },
+  "homepage": "https://github.com/ninoskuflic/tiny#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nino Skuflic"
+}

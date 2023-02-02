@@ -1,0 +1,16 @@
+{
+    "name": "TODO | ACME",
+    "short_name": "TODO",
+    "description": "TODO App by ACME",
+    "icons": [
+        {
+            "src": "https://cdn.glitch.me/248b0d2d-8ab9-4407-a073-136440ab3556/icon.png?v=1640879741758",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "index.html",
+    "display": "fullscreen",
+    "theme_color": "#2564CF",
+    "background_color": "#2564CF"
+}

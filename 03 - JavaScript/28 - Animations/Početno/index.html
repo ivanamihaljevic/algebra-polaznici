@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+        <style>
+            .button {
+                min-width: 256px;
+                text-align: center;
+                height: 48px;
+                border: 0;
+                background: blue;
+                color: white;
+                cursor: pointer;
+                outline: none;
+                font-size: 18px;
+            }
+        </style>
+    </head>
+    <body>
+        <button class="js-button button">SUBMIT</button>
+        <script>
+            var button = document.querySelector(".js-button");
+
+            button.addEventListener("click", function (event) {
+                event.preventDefault();
+
+                anime({
+                    targets: ".js-button",
+                    scaleX: 0.15,
+                    borderRadius: "100%",
+                    background: ["#0000ff", "#00ff00"],
+                    translateY: {
+                        value: "-100px",
+                        delay: 500,
+                        easing: "easeInOutElastic",
+                    },
+                });
+            });
+        </script>
+    </body>
+</html>
