@@ -1,4 +1,12 @@
 /**
+ * SERVICE WORKER STARTER
+ */
+
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js', { scope: '/' });
+}
+
+/**
  * ANIMATE THE INTRO LOGO 
  */
 
