@@ -1,1 +1,1 @@
-let names = ['John', 'Jane', 'Bob',, 'Mike'];
+var names = ['John', 'Jane', 'Bob',, 'Mike'];

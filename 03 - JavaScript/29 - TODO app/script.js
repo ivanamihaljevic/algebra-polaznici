@@ -1,3 +1,7 @@
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js', { scope: '/' });
+}
+
 /**
  * ANIMATE THE INTRO LOGO 
  */
@@ -19,9 +23,9 @@ setTimeout(() => {
 /**
  * MODAL 
  */
-var modal = document.getElementById('modal');
-var button = document.getElementById('button');
-var span = document.getElementsByClassName('close-modal')[0];
+let modal = document.getElementById('modal');
+let button = document.getElementById('button');
+let span = document.getElementsByClassName('close-modal')[0];
 
 // When a user clicks 'not you?', show them a modal
 button.onclick = function () {
@@ -96,7 +100,6 @@ function setUser() {
 
 // Create <span> add class='close' to each <span> 
 const myNodeList = document.getElementsByTagName('li');
-var i;
 for (i = 0; i < myNodeList.length; i++) {
     const span = document.createElement('span');
     const text = document.createTextNode('\u00D7');
@@ -107,7 +110,6 @@ for (i = 0; i < myNodeList.length; i++) {
 
 // Get each <span> with class='close', add event listener on them, once they are being clicked, remove them from DOM
 const close = document.getElementsByClassName('close');
-var i;
 for (i = 0; i < close.length; i++) {
     close[i].onclick = function () {
         const div = this.parentElement;

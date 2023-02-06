@@ -1,0 +1,12 @@
+Imate pred sobom primjer jednostavne stranice.
+
+1. Dodajte po uputama (offline) service workera vezan uz ovu stranicu
+
+Upute nadite ovdje: 
+https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/App_structure
+https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Offline_Service_workers
+
+- Kreirati app.js i sw.js
+- Dodati app.js u index.html
+- Registrirati sw.js kao service worker unutar app.js
+- Unutar sw.js staviti PNG slike u cache :)

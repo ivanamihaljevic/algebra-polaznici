@@ -1,0 +1,17 @@
+{
+    "name": "To Do",
+    "short_name": "To Do",
+    "description": "A simple To Do app by ACME",
+    "icons": [
+        {
+            "src": "assets/pwa.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "index.html",
+    "display": "fullscreen",
+    "theme_color": "#2564CF",
+    "background_color": "#2564CF",
+    "categories": ["education"]
+}

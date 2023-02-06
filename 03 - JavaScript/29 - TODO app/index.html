@@ -1,39 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Do | A Company That Makes Eerything</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
-        rel="stylesheet">
+    <link rel='preconnect' href='https://fonts.googleapis.com'>
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+    <link href='https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap'
+        rel='stylesheet'>
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicons/site.webmanifest">
     <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="shortcut icon" href="assets/favicons/favicon.ico">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+    <link rel="manifest" href="app.webmanifest">
 
     <!-- Anime.js Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 
-    <!-- Our Custom Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Title Tag -->
+    <title>To Do | ACME</title>
 
+    <!-- Our Custom Stylesheet -->
+    <link rel='stylesheet' href='style.css'>
 </head>
 
-<body>
-    <div class="loading">
+<body class="light">
+    <div class='loading' id='loading'>
         <div class="line-logo">
             <svg viewbox='0 0 82 66'>
                 <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="1.5" class="lines">
@@ -43,52 +42,50 @@
             </svg>
         </div>
     </div>
-    <div class="container">
+    <div class='container'>
         <main>
-            <div class="header">
-                <div class="main">
-                    <a href=""><img src="assets/logo.svg" alt="To Do"></a>
-                    <h2 id="greeting"></h2>
+            <div class='header'>
+                <div class='main'>
+                    <a href=''><img src='assets/logo.svg' alt='To Do' /></a>
+                    <h2 id='greeting'></h2>
                     <p>
-                        <span id="user"></span>, focus from work to play with the best to do list app
-                        <span class="change-name" id="button">(not you?)</span>
+                        <span id='user'></span>, focus from work to play with the best to do list app
+                        <span id='button' class='change-name'>(not you?)</span>
                         <br />
-                        <span id="date"></span>
+                        <span id='date'></span>
                     </p>
                 </div>
                 <div>
-                    <input type="text" id="inputField" placeholder="Add a task...">
-                    <button class="add" id="add" onclick="newTask()">Add</button>
+                    <input type='text' id='inputField' placeholder='Add a task...'>
+                    <button onclick='newTask()' class='add' id='add'>Add</button>
                 </div>
-                <span id="error">You must write a task before you can add it to the list.</span>
+                <span id='error'>You must write a task before you can add it to the list.</span>
+
             </div>
 
-            <ul id="list">
+            <ul id='list'>
                 <li>This is your first task</li>
             </ul>
-
         </main>
 
-        <div id="modal" class="modal">
-            <div class="modal-content">
-                <span class="close-modal">&times;</span>
+        <div id='modal' class='modal'>
+            <div class='modal-content'>
+                <span class='close-modal'>&times;</span>
                 <p>Please enter your new name and click the save button. <br />Once that has been done, refresh the page
                     to see the changes.</p>
-                <input type="text" id="name" placeholder="First name" required>
-                <span class="save" id="save" onclick="setUser()">Save</span>
+                <input type='text' id='name' placeholder='First name'>
+                <span onclick='setUser()' class='save' id='save'>Save</span>
             </div>
         </div>
 
         <footer>
-            <a href="https://acme.example.com/terms">Terms of Use</a> |
-            <a href="https://acme.example.com/terms">Privacy Policy</a> |
-            <a class="post" onclick="share()">Post to server</a>
-            </br>
-            Copyright &copy; <span id="year"></span> Acme Corporation. To Do is a trademark of Acme
-            Corporation.
+            <a href='https://go.example.com/terms'>Terms of Use</a> | <a href='https://go.example.com/privacy'>Privacy
+                Policy</a> | <a onclick="share()" class="post">Post to server</a>
+            <br />
+            Copyright &copy; <span id='year'></span> A Company That Makes Everything. All rights reserved.
         </footer>
     </div>
-    <script src="script.js" defer></script>
+    <script src='script.js'></script>
 </body>
 
 </html>

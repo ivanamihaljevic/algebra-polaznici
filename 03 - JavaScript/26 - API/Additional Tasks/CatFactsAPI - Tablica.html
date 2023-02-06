@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <title>Cat Facts API</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        td,
+        th,
+        tr {
+            border: 1px solid #EFEFEF;
+            font-size: 13px;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+
+    <!-- table for showing data -->
+    <table id="cats"></table>
+
+    <script>
+        const url = "https://catfact.ninja/breeds"
+        fetch(url)
+            .then(response => response.json())
+            .then(data => showData(data));
+
+        function showData(data) {
+            let tab =
+                `<tr>
+                <th>Breed</th>
+                <th>Country</th>
+                <th>Origin</th>
+                <th>Coat</th>
+                <th>Pattern</th> 
+            </tr>`;
+            for (let i of data.data) {
+                tab = tab + `<tr>
+                <td>${i.breed}</td>
+                <td>${i.country}</td>
+                <td>${i.origin}</td>
+                <td>${i.coat}</td>
+                <td>${i.pattern}</td>
+                </tr>`;
+            }
+
+            document.getElementById("cats").innerHTML = tab;
+        }
+    </script>
+</body>
+
+</html>

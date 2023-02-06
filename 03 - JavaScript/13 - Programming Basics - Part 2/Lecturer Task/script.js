@@ -26,6 +26,10 @@ console.log(add(1, 2, 3, 4, 5));
 
 /* 
 *  BMI CALCULATOR
+    Underweight = <18.5. 
+    Normal weight = 18.5–24.9. 
+    Overweight = 25–29.9. 
+    Obesity = BMI of 30 or greater.
 */
 (function calculateBMI() {
     let result;
@@ -33,7 +37,7 @@ console.log(add(1, 2, 3, 4, 5));
     let weight = prompt(`What is your weight, ${person}? `, '');
     let height = prompt(`And lastly, ${person}, what is your height (in m2) `, '');
 
-    result = weight / (height * 2);
+    result = weight / (height * 2) * 100;
 
     switch (true) {
         case (result <= 18.5):

@@ -1,0 +1,14 @@
+{
+    "name": "@ninoskuflic/tiny",
+    "version": "2.0.0",
+    "description": "Removes all spaces from a string - useless, but beautiful.",
+    "license": "MIT",
+    "repository": "ninoskuflic/tiny",
+    "main": "index.js",
+    "keywords": [
+        "tiny",
+        "npm",
+        "package",
+        "ninoskuflic"
+    ]
+}

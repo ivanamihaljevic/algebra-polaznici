@@ -1,10 +1,10 @@
-var x = "Lorem ipsum",
+var x = 'Lorem ipsum',
     y = 2345,
-    z = "2345"
+    z = '2345'
 	q = false;
 	
 // 1. 
-var trueFalse = !!"false" == !!"true";
+var trueFalse = !!'false' == !!'true';
 
 // 2. 
 console.log(q || x || y || z);
@@ -21,4 +21,4 @@ const taxRate = 0.082;
 let totalPrice = price + (price * taxRate);
 totalPrice.toFixed(2);
 
-console.log("Total:", totalPrice);
+console.log('Total:', totalPrice);
