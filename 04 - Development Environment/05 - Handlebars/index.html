@@ -6,10 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Handlebars Template</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
+    <h1>Student Info</h1>
+
+    <div id="target"></div>
+
+    <script id="template" type="text/x-handlebars-template">
+    <p>The student <strong>{{name}}</strong> is {{years}} old.</p>
+    </script>
+
+    <script>
+        window.onload = function () {
+            // Get the template
+            let template = document.getElementById('template').innerHTML;
+
+            // Compile the template
+            let compiled_template = Handlebars.compile(template);
+
+            // Render the data into the template
+            let rendered = compiled_template({ name: 'Nino', years: 25 });
+
+            // Overwrite the contents of #target with the rendered HTML
+            document.getElementById('target').innerHTML = rendered;
+
+        }
+    </script>
 
 </body>
 

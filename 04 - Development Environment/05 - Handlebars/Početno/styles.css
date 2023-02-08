@@ -1,0 +1,86 @@
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    #wrapper {
+      width: 100%;
+    }
+  }
+  
+  #wrapper {
+    background: #F4F4F4;
+    width: 50%;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  table {
+    margin: 0 auto;
+    min-width: 75%;
+  }
+  
+  th {
+    background-color: #E0E0E0;
+    color: #161616;
+    padding: 20px;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: left;
+  }
+  
+  td {
+    color: #525252;
+    background-color: white;
+    border-bottom: 1px solid #E0E0E0;
+    padding: 20px;
+    font-weight: 200;
+    font-size: 13px;
+  }
+  
+  #global-data {
+    text-align: center;
+    font-size: 10px;
+    font-weight: 100;
+    color: gray;
+  }
+  
+  table.covid-data tr:hover td {
+    background-color: #fefefe;
+  }
+  
+  #hero {
+    font-size: 1.7em;
+    background: white;
+    padding: 20px;
+    font-weight: 300;
+    text-align: left;
+  }
+  
+  #total {
+    font-size: 13px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+  
+  #error {
+    display: none;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 300;
+  }
+  
+  #error p {
+    font-weight: 200;
+    font-size: 13px;
+  }
+  
+  svg {
+    width: 50px;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  /*# sourceMappingURL=styles.css.map */
