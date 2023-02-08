@@ -45,28 +45,16 @@ body {
   top: -80vh;
 }
 .wrapper div:first-child {
-  -webkit-animation: slide-down 1.5s ease-in-out forwards;
-          animation: slide-down 1.5s ease-in-out forwards;
+  animation: slide-down 1.5s ease-in-out forwards;
   background: rgba(51, 51, 51, 0.85);
 }
 .wrapper div:nth-child(2) {
-  -webkit-animation: slide-down 1.5s ease-in-out 1.5s forwards;
-          animation: slide-down 1.5s ease-in-out 1.5s forwards;
+  animation: slide-down 1.5s ease-in-out 1.5s forwards;
   background: rgba(136, 0, 0, 0.5);
 }
 .wrapper div:last-child {
-  -webkit-animation: slide-down 1.5s ease-in-out 3s forwards;
-          animation: slide-down 1.5s ease-in-out 3s forwards;
+  animation: slide-down 1.5s ease-in-out 3s forwards;
   background: rgba(255, 153, 51, 0.5);
-}
-
-@-webkit-keyframes slide-down {
-  0% {
-    top: -80vh;
-  }
-  100% {
-    top: 0;
-  }
 }
 
 @keyframes slide-down {
