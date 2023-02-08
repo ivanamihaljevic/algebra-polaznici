@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>User Directory</title>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+	
+	<!-- Stylesheets -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<script id="template" type="text/x-handlebars-template">
+		<table>
+			<tr>
+				<th>№</th>
+				<th>Avatar</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Email</th>
+				<th>Username</th>
+				<th>Password</th>
+			</tr>
+			{{#each user}}
+			<tr>
+			<td>{{@index}}</td>
+			<td><img src={{avatar}}/ class="avatar"></td>
+			<td>{{first_name}}</td>
+			<td>{{last_name}}</td>
+			<td>{{email}}</td>
+			<td>{{username}}</td>
+			<td>{{password}}</td>
+			</tr>
+			{{/each}}
+		</table>
+	</script>
+
+	<div id="users"></div>
+	<script src="script.js"></script>
+</body>
+
+</html>
