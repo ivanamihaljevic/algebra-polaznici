@@ -1,0 +1,9 @@
+1. Uključite Handlebars biblioteku na stranicu koristeći CDN.
+2. Proučite COVID-19 API (api.covid19api.com)
+3. Kreirajte FETCH request na API koji dohvaća statistike COVID-19 u svijetu
+4. Kreirajte HTML stiliziranu tablicu dobivenih rezultata koristeći Handlebars
+5. Lista mora sadržavati:
+    - Redni broj
+    - Državu
+    - Total Cases
+    - Total Deaths
