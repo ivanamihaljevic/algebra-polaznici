@@ -1,0 +1,53 @@
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+@media only screen and (max-width: 600px) {
+  #wrapper {
+    width: 100%;
+  }
+}
+
+#wrapper {
+  width: 50%;
+  margin: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+table {
+  margin: 0 auto;
+  min-width: 75%;
+}
+
+th {
+  padding: 20px;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: left;
+}
+
+td {
+  border-bottom: 1px solid #E0E0E0;
+  padding: 20px;
+  font-weight: 200;
+  font-size: 13px;
+}
+
+#hero {
+  font-size: 1.7em;
+  padding: 20px;
+  font-weight: 300;
+  text-align: left;
+}
+
+#total {
+  font-size: 13px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.avatar {
+  max-width: 50px;
+  border-radius: 200px;
+}
