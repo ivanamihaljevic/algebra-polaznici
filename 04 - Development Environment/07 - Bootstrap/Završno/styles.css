@@ -9,7 +9,6 @@ body {
 }
 
 #wrapper {
-  background: #F4F4F4;
   width: 50%;
   margin: auto;
   padding-top: 50px;
@@ -22,8 +21,6 @@ table {
 }
 
 th {
-  background-color: #E0E0E0;
-  color: #161616;
   padding: 20px;
   font-weight: 500;
   font-size: 14px;
@@ -31,13 +28,24 @@ th {
 }
 
 td {
-  color: #525252;
   border-bottom: 1px solid #E0E0E0;
   padding: 20px;
   font-weight: 200;
   font-size: 13px;
 }
 
+#hero {
+  font-size: 1.7em;
+  padding: 20px;
+  font-weight: 300;
+  text-align: left;
+}
+
+#total {
+  font-size: 13px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
 
 .avatar {
   max-width: 50px;

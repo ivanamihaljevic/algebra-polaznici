@@ -73,7 +73,6 @@ ul li {
   /* make the list items unselectable */
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
@@ -134,11 +133,6 @@ input {
 }
 
 input::-moz-placeholder {
-  font-size: 13px;
-  font-weight: 300;
-}
-
-input:-ms-input-placeholder {
   font-size: 13px;
   font-weight: 300;
 }
@@ -217,9 +211,6 @@ input::placeholder {
   border: 1px solid #EFEFEF;
 }
 .modal ::-moz-placeholder {
-  font-weight: 300;
-}
-.modal :-ms-input-placeholder {
   font-weight: 300;
 }
 .modal ::placeholder {
