@@ -20,15 +20,32 @@ $(document).ready(function () {
 	function afterRender() {
 		$('[data-toggle="popover"]').popover();
 		$('table th').css('color', 'darkBlue');
+
+		$('table tr').on('mouseenter', event => {
+			$(event.currentTarget).css('backgroundColor', 'yellow');
+		});
+
+		$('table tr').on('mouseleave', event => {
+			$(event.currentTarget).removeAttr('style');
+		});
+
 		addStripes();
 
 		setTimeout(function () {
 			const hideElements = $("table td a:contains('p')").filter(function () {
 				return this.innerHTML.indexOf('p') == 0;
 			});
+			console.log(hideElements)
 			hideElements.closest('tr').remove();
 			addStripes();
+
 			const info = $('<div></div>').insertAfter($('#result')).text('Hidden: ' + hideElements.length);
 		}, 2000);
 	}
+
+
+	$(window).resize(() => {
+		console.log($(window).width());
+	});
+
 });

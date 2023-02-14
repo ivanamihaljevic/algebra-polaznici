@@ -1,0 +1,6 @@
+1. Prvi paragraf treba imati žuti background color
+2. Paragraf (gone) treba nestati (slide Up) kada se klikne
+3. 3. paragraf na double click treba nestati (slide up)
+4. show-btn i toggle-btn (klase u htmlu) trebaju sakriti i pokazati SVE paragrafe odjednom
+5. button-box na klik animira box
+6. callback button na klik skriva .gone paragraf i pokazuje alert box sa tekstom

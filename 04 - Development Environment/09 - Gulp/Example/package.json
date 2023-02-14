@@ -1,0 +1,15 @@
+{
+  "name": "gulp-project",
+  "version": "1.0.0",
+  "description": "Gulp Tutorial Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nino Škuflić",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-uglify": "^3.0.2"
+  }
+}
