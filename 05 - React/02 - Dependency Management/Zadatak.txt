@@ -1,0 +1,9 @@
+Početno stanje: npm creat-react-app
+
+	1.	Napravite novu React aplikaciju
+	2.	Na npmjs.com pronađite neki paket za generiranje random stringa
+	3.	Instalirati taj paket u novokreiranu aplikaciju, osigurajte da je odabrani paket naveden i pod "dependencies"
+	4.	Iskoristite instalirani paket za generiranje random stringa
+
+5. Instalirajte paket "moment" i prikažite trenutni datum i vrijeme u formatu "MMMM Do YYYY, h:mm:ss a"
+6. Instalirajte paket "give-me-a-joke" i ispišite vic po izboru (predlažem dad joke ili nešto slično) U KONZOLU (consol.log) - trenutno ne znate kako to napraviti u Reactu
