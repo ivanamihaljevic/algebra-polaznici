@@ -1,0 +1,16 @@
+Početno stanje: Početno stanje u mapi src/Components su napravljene četiri komponente.
+Potrebno napraviti React aplikaciju koja će raditi slijedeće:
+	1. Unutar App.js-a u jednoj programskoj naredbi importati sve četiri komponente.
+	2. Prikazati sve četiri komponente na ekranu.
+
+3. Napraviti mapu "Title" unutar mape "Components"
+4. Napraviti komponentu "BigTitle" sa h1 elementom unutar mape "Title"
+5. Napraviti komponentu "SmallTitle" sa h6 elementom unutar mape "Title"
+6. Koristiti index.js u mapi "Title" za exportanje "BigTitle" i "SmallTitle" komponenti
+
+Primjer:
+export { default as BigTitle } from "./BigTitle";
+
+7. Unutar App.js importati "BigTitle" i "SmallTitle" te ih koristiti
+
+VJEŽBAMO OD 19:50 - 20:05 :) OD 3. - 7. ZADATKA!
