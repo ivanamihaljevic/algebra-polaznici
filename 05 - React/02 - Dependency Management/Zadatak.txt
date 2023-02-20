@@ -1,4 +1,4 @@
-Početno stanje: npm creat-react-app
+Početno stanje: npx creat-react-app
 
 	1.	Napravite novu React aplikaciju
 	2.	Na npmjs.com pronađite neki paket za generiranje random stringa
