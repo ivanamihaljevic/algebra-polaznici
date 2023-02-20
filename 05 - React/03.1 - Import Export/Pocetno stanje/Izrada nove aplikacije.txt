@@ -1,0 +1,4 @@
+Izrada noce aplikacije:
+	npx create-react-app import-export
+	cd import-export
+	npm start
