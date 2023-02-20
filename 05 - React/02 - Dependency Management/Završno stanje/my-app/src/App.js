@@ -1,4 +1,3 @@
-import './App.css';
 import randomstring from 'randomstring';
 import moment from 'moment';
 
