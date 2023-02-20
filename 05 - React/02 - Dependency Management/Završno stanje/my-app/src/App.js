@@ -3,7 +3,7 @@ import moment from 'moment';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       {randomstring.generate()}
       <br/>
       {moment().format("MMMM Do YYYY, h:mm:ss a")}
