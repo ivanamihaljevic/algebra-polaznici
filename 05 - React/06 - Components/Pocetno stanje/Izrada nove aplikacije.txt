@@ -1,0 +1,4 @@
+Izrada noce aplikacije:
+	npx create-react-app components
+	cd components
+	npm start
