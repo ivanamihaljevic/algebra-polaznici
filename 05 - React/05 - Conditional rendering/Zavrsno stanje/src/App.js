@@ -8,7 +8,7 @@ function ConditionalRendering({ number }) {
       <h2>Number? {number}</h2>
       {ivan}
       {number === 2 && <h3>Luka!</h3>}
-      {number === 3 ? <h3>Marko :)</h3> : null}
+      {number === 3 ? <h3>Marko</h3> : null}
     </div>
   );
 }

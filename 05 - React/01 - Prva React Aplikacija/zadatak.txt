@@ -1,0 +1,21 @@
+Dobro došli u React Modul!
+
+Sada ćete napraviti svoju prvu React aplikaciju! :)
+
+Pratite sljedeće upute, i na kraju biste trebali uspješno napraviti svoju prvu React aplikaciju.
+
+Potrebno je otvoriti Windows Command Prompt ili Visual Studio Code Terminal te utipkati sljedeće naredbe:
+1. Otvorite Windows Command Prompt (Windows) ili Terminal (Mac OS) ili Visual Studio Code Terminal (oba operativna sustava) i upišite sljedeće naredbe.
+2. npm create-react-app my-react-app gdje NPM označava Node Package Manager, create-react-app naredbu kojom se kreira React aplikacija, te my-react-app ime vaše aplikacije
+2. U terminalu, nakon instalacije, unesite cd my-react-app
+3. npm start
+4. Pričekajte da se otvori vaš internet preglednik s adresom http://localhost:3000. Ako se internet preglednik ne otvori automatski, ručno ga otvorite te posjetite http://localhost:3000
+
+Nakon što ste kreirali svoju prvu React aplikaciju, potrebno je sljedeće:
+
+5. Promijeniti favicon aplikacije (možete koristiti koju god ikonicu želite)
+6. Promijeniti naziv aplikacije - možda vaše ime i prezime ne bi bilo loše :)
+7. Ispisati "Moja prva aplikacija" na web stranici
+
+8. Promijeniti boju pozadine, font, i boju teksta
+9. Dodati link na algebra.hr ispod linka "Learn React"

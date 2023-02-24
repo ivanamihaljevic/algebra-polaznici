@@ -1,0 +1,9 @@
+#comment{
+  padding: 20px;
+  border: 1px solid #EFEFEF;
+}
+
+#avatar{
+  max-width: 200px;
+  border-radius: 100%;
+}
