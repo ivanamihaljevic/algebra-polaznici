@@ -1,0 +1,4 @@
+Izrada nove aplikacije:
+	npx create-react-app props
+	cd props
+	npm start
