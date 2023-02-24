@@ -13,7 +13,7 @@ export default function UserFunction({ name, years, job }) {
 
 UserFunction.propTypes = {
   name: PropTypes.string.isRequired,
-  age: PropTypes.number.isRequired,
+  years: PropTypes.number.isRequired,
   job: PropTypes.string,
 }
 
