@@ -1,0 +1,11 @@
+Početno stanje aplikacije je završno stanje vježbe 5.10 i nalazi se u mapi "Pocetno stanje".
+Potrebno je promijeniti komponentu App - komponenta App mora biti definirana funkcijom.
+Za čuvanje stanja aplikacije potrebno je koristiti useState hook.
+
+1. Napravite stateless komponentu "User" koja prima propertyje "name", "age", "job", "onRandomAge", "onChangeAge". Propertyje "name", "age", i "job" prikazati proizvoljno, "onRandomAge" proslijediti u button komponentu, a "onChangeAge" u input komponentu.
+
+2. Unutar "App" komponente koristiti "User" komponentu za prikaz svih usera u stateu umjesto trenutno korištenih komponenti. Proslijediti propove i handlere.
+
+NAPOMENA: ako vam ne radi logika za button i input, nema veze. Pobrinite se sada za vizual, a logiku možete prepisati iz prozora lijevo :)
+
+---> ZADATKE 1 I 2 VJEŽBAMO DO 20:15! JAVITE U CHAT KAKO NAPREDUJETE :) <---
