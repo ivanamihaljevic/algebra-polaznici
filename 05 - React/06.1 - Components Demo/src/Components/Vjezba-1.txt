@@ -1,0 +1,3 @@
+1. Napravite novu React aplikaciju naziva "components" (ili slično ako je taj naziv već zauzet)
+2. Napravite 3 funkcionalne komponente koje će primati sljedeće parametre: name, age, location
+3. Ispišite na stranici "Pozdrav NAME. Vidim da dolazite iz LOCAITON i imate AGE godina.
