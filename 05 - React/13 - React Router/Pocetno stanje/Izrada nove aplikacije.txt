@@ -1,0 +1,4 @@
+Izrada noce aplikacije:
+	npx create-react-app <ime_aplikacije>
+	cd <ime_aplikacije>
+	npm start
