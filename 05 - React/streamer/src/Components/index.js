@@ -1,0 +1,1 @@
+export { default as TrendingList } from './Trending/TrendingList';
