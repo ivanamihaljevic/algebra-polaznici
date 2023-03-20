@@ -1,0 +1,8 @@
+.NASAImage h2 {
+  text-align: center;
+}
+.NASAImage img {
+  width: 500px;
+  display: block;
+  margin: 0 auto;
+}

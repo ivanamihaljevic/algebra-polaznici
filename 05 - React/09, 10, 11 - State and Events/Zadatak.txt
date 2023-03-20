@@ -1,0 +1,24 @@
+*******************************************************
+1. ZADATAK - State / Class Component
+*******************************************************
+1.1 Napravite class komponentu Characters.jsx u kojoj će te u stanje komponente staviti podatke o nekom animiranom liku kao na primjer Family Guy, Simpsons, itd. 
+
+Stavite barem name, age i best friend. 
+Data types trebaju biti string, int i bool.
+
+1.2 U istoj datoteci, napravite drugu class komponentu npr. "Details" u kojoj će te prikazati gore navedena stanja putem propsa. Dakle, šaljete iz Parent komponente stanje u Child komponentu putem propsa.
+
+1.3 Unutar Child komponente, pritiskom na gumb, promijenite animiranog lika (i naravno pripadajuće podatke, name, age i best friend).
+
+*******************************************************
+2. ZADATAK - State / Function Component
+*******************************************************
+Napravite gore navedeni zadatak u Funkcionalnoj komponenti - refaktorirajte postojeći kod.
+
+*******************************************************
+3. ZADATAK - Events
+*******************************************************
+Napravite novu funkcionalnu komponentu koja će imati 2 radio inputa i 1 submit button.
+Kada korisnik odabere jedan od 2 radio buttona, pospremite odabir u stanje.
+
+Kada korisnik klikne na submit pokažite u alertu "You have selected + stanje". Karaktera koji je korisnik odabrao VADITE ISKLJUČIVO IZ STANJA! No hard coding. :D 

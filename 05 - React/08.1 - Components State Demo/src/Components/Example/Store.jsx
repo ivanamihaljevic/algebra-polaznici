@@ -7,7 +7,8 @@ export default class Store extends React.Component {
         sell: "anything"
     };
 
-    render() {
+    render(){
         return <h3>I'm selling {this.state.sell}.</h3>
     }
+
 }
