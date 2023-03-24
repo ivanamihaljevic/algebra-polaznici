@@ -1,0 +1,4 @@
+Izrada nove aplikacije:
+	npx create-react-app rest-api
+	cd rest-api
+	npm start

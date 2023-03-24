@@ -1,18 +1,16 @@
 import React from 'react';
 
 export default class App extends React.Component {
-  state = {
-    value: ''
+  state = { value: '' };
+
+  handleChange = event => {
+    this.setState({ value: event.target.value });
   };
 
-  handleChange = e => {
-    this.setState({ value: e.target.value });
-  };
-
-  handleSubmit = e => {
-    e.preventDefault();
+  handleSubmit = event => {
+    event.preventDefault();
     const { value } = this.state;
-    
+
     alert(`Poslano je ime ${value}`);
     this.setState({ value: '' });
   };
