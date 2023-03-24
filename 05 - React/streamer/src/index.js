@@ -4,7 +4,7 @@ import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { TrendingList, CustomNavbar, Footer, Movies } from './Components'; // Custom import for components
+import { TrendingList, CustomNavbar, Footer, Movies, Rate } from './Components'; // Custom import for components
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -28,7 +28,11 @@ root.render(
       <Route path='/view/tv/:tvID' element={<TrendingList type='all' timeline='day' name='' />} />
       <Route path='/view/movie/:movieID' element={<Movies />} />
       <Route path='/view/person/:personID' element={<TrendingList type='all' timeline='day' name='' />} />
+
+      <Route path='rate/movie/:contentID' element={<Rate name='movie' type='movie' />} />
+      <Route path='rate/tv/:contentID' element={<Rate name='TV show' type='tv' />} />
+
     </Routes>
-    <Footer />
+    {/* <Footer /> */}
   </BrowserRouter>
 );
