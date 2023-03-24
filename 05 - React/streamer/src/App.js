@@ -13,7 +13,7 @@ export default function App() {
       </div>
 
       <Trending link='view/movie' type='movie/upcoming' animation='scroll-tray no-text' />
-      <Trending link='view/movie' type='trending/tv/week' animation='scroll-tray slow no-text' />
+      <Trending link='view/tv' type='trending/tv/week' animation='scroll-tray slow no-text' />
       <Trending link='view/movie' type='trending/movie/week' animation='scroll-tray no-text' />
     </div>
   );
