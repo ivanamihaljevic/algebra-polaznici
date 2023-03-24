@@ -85,6 +85,20 @@ export default function Movies() {
                         </>
                     }
 
+                    <h5>Similar Movies</h5>
+                    <div className='scroll-tray no-animation' style={{ paddingLeft: '0px' }}>
+                        {movie.recommendations?.results.map(results => (
+                            <div key={results.id}>
+                                <a href={`/view/movie/${results.id}`}>
+                                    {!results.poster_path ? <img src='https://placehold.co/133x200' alt={results.title} className='scroll-tray-image' /> : <img src={`https://image.tmdb.org/t/p/w342${results.poster_path}`} alt={results.title} className='scroll-tray-image' />}
+                                    <br />
+                                    <span className='show-title'>
+                                        {results.title?.substring(0, 20)}
+                                    </span>
+                                </a>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </>
