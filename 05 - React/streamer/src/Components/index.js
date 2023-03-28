@@ -7,3 +7,4 @@ export { default as Rate } from './Rate/Rate';
 export { default as TVShows } from './TV Shows/Details/TVShows';
 export { default as Seasons } from './TV Shows/Seasons/Seasons';
 export { default as Episodes } from './TV Shows/Episodes/Episodes';
+export { default as Search } from './Search/Search';
