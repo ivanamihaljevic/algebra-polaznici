@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { dateFormatting_Y, dateFormatting_YMD } from '../../../Helpers/utils';
+import { dateFormatting_Y } from '../../../Helpers/utils';
 
 // .env variables
 const api_key = process.env.REACT_APP_API_KEY;
